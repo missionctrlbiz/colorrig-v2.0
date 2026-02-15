@@ -22,10 +22,6 @@ const nextConfig = {
         // Allow production builds even with type errors during migration.
         ignoreBuildErrors: true,
     },
-    eslint: {
-        // Allow production builds even with lint warnings during migration.
-        ignoreDuringBuilds: true,
-    },
 };
 
 export default nextConfig;
