@@ -1,0 +1,36 @@
+/*
+ * Colorrig v2.0 — Global Overrides
+ * Applied AFTER main.css so brand colors take precedence.
+ *
+ * The Eventify template uses --ztc-* CSS custom properties.
+ * We override them here to match Colorrig's brand palette:
+ *   Primary Accent (Aqua):  #74fbfe   (replaces template yellow #FFBA00)
+ *   Dark Blue:              #070327   (replaces template dark #1A1719)
+ */
+
+:root {
+  /* ── Font override — MTN Brighter Sans everywhere ── */
+  --figtree: var(--font-mtn-brighter-sans), sans-serif;
+  --grotesk: var(--font-mtn-brighter-sans), sans-serif;
+
+  /* ── Primary accent ── */
+  --ztc-text-text-4: #74fbfe;
+  --ztc-bg-bg-3: #74fbfe;
+
+  /* ── Dark / secondary ── */
+  --ztc-text-text-2: #070327;
+  --ztc-bg-bg-2: #070327;
+  --ztc-text-text-5: #070327;
+  --ztc-bg-bg-4: #070327;
+  --ztc-text-text-11: #070327;
+  --ztc-bg-bg-8: #070327;
+}
+
+/* Force MTN Brighter Sans on all elements */
+body,
+h1, h2, h3, h4, h5, h6,
+p, a, span, li, td, th,
+input, textarea, select, button,
+.nav-link, .vl-btn1, .vl-btn2 {
+  font-family: var(--font-mtn-brighter-sans), sans-serif !important;
+}
