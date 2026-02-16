@@ -20,6 +20,11 @@ import { mtnBrighterSans } from "./fonts"
 export const metadata: Metadata = {
 	title: "Colorrig Limited | Live Streaming & Broadcast Solutions",
 	description: "Colorrig Limited — Where Excellence Meets Live Transmission. Unparalleled High Definition Live streaming and broadcast solutions in Nigeria.",
+	icons: {
+		icon: "/images/colorrig-favicon.png",
+		shortcut: "/images/colorrig-favicon.png",
+		apple: "/images/colorrig-favicon.png",
+	},
 }
 
 export default function RootLayout({
