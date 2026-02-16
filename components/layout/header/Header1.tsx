@@ -20,29 +20,30 @@ export default function Header1({ scroll, isMobileMenu, handleMobileMenu, isSear
 												<Link href="/">Home</Link>
 											</li>
 											<li>
-												<Link href="/about">About Us</Link>
+												<Link href="/about">About Us <i className="fa-solid fa-angle-down" /></Link>
+												<ul className="dropdown-padding">
+													<li><Link href="/team">Our Team</Link></li>
+													<li><Link href="/portfolio">Our Portfolio</Link></li>
+												</ul>
 											</li>
 											<li>
 												<Link href="/solutions">Solutions <i className="fa-solid fa-angle-down" /></Link>
 												<ul className="dropdown-padding">
-													<li><Link href="/solutions#live-streaming">Live Streaming</Link></li>
-													<li><Link href="/solutions#pricing">Pricing & Packages</Link></li>
-													<li><Link href="/solutions">All Solutions</Link></li>
+													<li><Link href="/solutions">Live Streaming Solutions</Link></li>
+													<li><Link href="/solutions#liveu">LiveU Solutions</Link></li>
 												</ul>
 											</li>
 											<li>
-												<Link href="/#">Pages <i className="fa-solid fa-angle-down" /></Link>
+												<Link href="#">Media &amp; Resources <i className="fa-solid fa-angle-down" /></Link>
 												<ul className="dropdown-padding">
-													<li><Link href="/portfolio">Portfolio</Link></li>
-													<li><Link href="/team">Our Team</Link></li>
-													<li><Link href="/faq">FAQ</Link></li>
+													<li><Link href="/faq">FAQs</Link></li>
+													<li><Link href="/careers">Careers</Link></li>
+													<li><Link href="/memories">Gallery</Link></li>
+													<li><Link href="/blog">The Live Link</Link></li>
 												</ul>
 											</li>
 											<li>
-												<Link href="/blog">Blog</Link>
-											</li>
-											<li>
-												<Link href="/contact">Contact</Link>
+												<Link href="/contact">Contact Us</Link>
 											</li>
 										</ul>
 									</div>

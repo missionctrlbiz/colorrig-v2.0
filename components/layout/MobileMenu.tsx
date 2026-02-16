@@ -38,24 +38,29 @@ export default function MobileMenu({ isMobileMenu, handleMobileMenu }: any) {
 				<div className="mobile-nav mobile-nav1">
 					<ul className="mobile-nav-list nav-list1">
 						<li><Link href="/" className="hash-nav">Home</Link></li>
-						<li><Link href="/about" className="hash-nav">About Us</Link></li>
 						<li className="has-sub hash-has-sub"><span className={`submenu-button ${isAccordion == 1 ? "submenu-opened" : ""}`} onClick={() => handleAccordion(1)}><em /></span>
-							<Link href="/solutions" className="hash-nav">Solutions</Link>
+							<Link href="/about" className="hash-nav">About Us</Link>
 							<ul className={`sub-menu ${isAccordion == 1 ? "open-sub" : ""}`} style={{ display: `${isAccordion == 1 ? "block" : "none"}` }}>
-								<li><Link href="/solutions#live-streaming" className="hash-nav">Live Streaming</Link></li>
-								<li><Link href="/solutions#pricing" className="hash-nav">Pricing & Packages</Link></li>
-								<li><Link href="/solutions" className="hash-nav">All Solutions</Link></li>
+								<li><Link href="/team" className="hash-nav">Our Team</Link></li>
+								<li><Link href="/portfolio" className="hash-nav">Our Portfolio</Link></li>
 							</ul>
 						</li>
 						<li className="has-sub hash-has-sub"><span className={`submenu-button ${isAccordion == 2 ? "submenu-opened" : ""}`} onClick={() => handleAccordion(2)}><em /></span>
-							<Link href="/#" className="hash-nav">Pages</Link>
+							<Link href="/solutions" className="hash-nav">Solutions</Link>
 							<ul className={`sub-menu ${isAccordion == 2 ? "open-sub" : ""}`} style={{ display: `${isAccordion == 2 ? "block" : "none"}` }}>
-								<li><Link href="/portfolio" className="hash-nav">Portfolio</Link></li>
-								<li><Link href="/team" className="hash-nav">Our Team</Link></li>
-								<li><Link href="/faq" className="hash-nav">FAQ</Link></li>
+								<li><Link href="/solutions" className="hash-nav">Live Streaming Solutions</Link></li>
+								<li><Link href="/solutions#liveu" className="hash-nav">LiveU Solutions</Link></li>
 							</ul>
 						</li>
-						<li><Link href="/blog" className="hash-nav">Blog</Link></li>
+						<li className="has-sub hash-has-sub"><span className={`submenu-button ${isAccordion == 3 ? "submenu-opened" : ""}`} onClick={() => handleAccordion(3)}><em /></span>
+							<Link href="#" className="hash-nav">Media &amp; Resources</Link>
+							<ul className={`sub-menu ${isAccordion == 3 ? "open-sub" : ""}`} style={{ display: `${isAccordion == 3 ? "block" : "none"}` }}>
+								<li><Link href="/faq" className="hash-nav">FAQs</Link></li>
+								<li><Link href="/careers" className="hash-nav">Careers</Link></li>
+								<li><Link href="/memories" className="hash-nav">Gallery</Link></li>
+								<li><Link href="/blog" className="hash-nav">The Live Link</Link></li>
+							</ul>
+						</li>
 						<li><Link href="/contact" className="hash-nav">Contact Us</Link></li>
 					</ul>
 

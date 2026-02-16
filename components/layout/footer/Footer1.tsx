@@ -9,7 +9,7 @@ export default function Footer1() {
 					<div className="row">
 						<div className="col-lg-3 col-md-6">
 							<div className="footer-logo-area">
-								<img src="/images/Colorrig-White.png" alt="Colorrig" style={{ height: '50px', width: 'auto' }} />
+								<img src="/images/Colorrig-Dark.png" alt="Colorrig" style={{ height: '50px', width: 'auto' }} />
 								<div className="space16" />
 								<p>We are Colorrig Limited - Where Excellence Meets Live Transmission. Unparalleled High Definition Live streaming and broadcast solutions.</p>
 								<div className="space24" />
@@ -102,8 +102,9 @@ export default function Footer1() {
 					<div className="space60" />
 					<div className="row">
 						<div className="col-lg-12">
-							<div className="copyright">
-								<p>© Copyright {new Date().getFullYear()} - Colorrig Limited. All Right Reserved</p>
+							<div className="copyright" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+								<p style={{ margin: 0 }}>© Copyright {new Date().getFullYear()} - <Link href="/">Colorrig Limited</Link>. All Rights Reserved</p>
+								<p style={{ margin: 0 }}>Made with ❤️ by <Link href="https://missionctrl.com.ng" target="_blank" rel="noopener noreferrer">MissionCTRL Labs</Link></p>
 							</div>
 						</div>
 					</div>

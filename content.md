@@ -10,16 +10,18 @@
 ## Navigation Menu
 
 - **Home**
-- **Our Solutions**
+- **About Us**
+  - Our Team
+  - Our Portfolio
+- **Solutions**
   - Live Streaming Solutions
-  - Pricing and Packages
-- **Our Portfolio**
-- **Our Resources**
+  - LiveU Solutions
+- **Media & Resources**
   - FAQs
   - Careers
+  - Gallery (Photos , Videos)
 - **The Live Link** *(Blog)*
-- **About Us**
-- **Get in Touch**
+- **Contact Us**
 
 ---
 

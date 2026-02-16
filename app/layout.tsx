@@ -33,8 +33,8 @@ export default function RootLayout({
 	children: React.ReactNode
 }>) {
 	return (
-		<html lang="en">
-			<body className={mtnBrighterSans.variable}>{children}</body>
+		<html lang="en" suppressHydrationWarning>
+			<body className={`homepage1-body ${mtnBrighterSans.variable}`} suppressHydrationWarning>{children}</body>
 		</html>
 	)
 }
