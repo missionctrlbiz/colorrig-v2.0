@@ -2,6 +2,7 @@
 import Link from 'next/link'
 import { Autoplay, Navigation, Pagination } from "swiper/modules"
 import { Swiper, SwiperSlide } from "swiper/react"
+import { teamMembers } from '@/app/team/teamData'
 
 const swiperOptions = {
 	modules: [Autoplay, Pagination, Navigation],
@@ -39,7 +40,7 @@ const swiperOptions = {
 			spaceBetween: 30,
 		},
 		991: {
-			slidesPerView: 2,
+			slidesPerView: 3,
 			spaceBetween: 30,
 		},
 		1199: {
@@ -52,16 +53,6 @@ const swiperOptions = {
 		},
 	}
 }
-
-const teamMembers = [
-	{ name: "Charles Archibong", role: "CEO", image: "/images/Charles-Archibong.jpg" },
-	{ name: "Bibitayo Archibong", role: "Chief Marketing Officer", image: "/images/Bibitayo-Archibong.jpg" },
-	{ name: "Damilare O. Oluwawa", role: "Broadcast & Network Engineer", image: "/images/Damilare-O.-Oluwawa.jpg" },
-	{ name: "Lucky Aduba", role: "Streaming Engineer", image: "/images/Lucky-Aduba.jpg" },
-	{ name: "Oluwaseun Suberu", role: "Streaming & Network Engineer", image: "/images/Oluwaseun-Suberu.jpg" },
-	{ name: "Omotayo Ogunfeibo", role: "Streaming Engineer", image: "/images/Omotayo-Ogunfeibo.jpg" },
-	{ name: "Jamaldeen O. Lawal", role: "Developer", image: "/images/Jamaldeen-O.-Lawal.jpg" },
-];
 
 export default function Section4() {
 	return (
@@ -84,22 +75,13 @@ export default function Section4() {
 								{teamMembers.map((member, index) => (
 									<SwiperSlide className="team-widget-boxarea" key={index}>
 										<div className="img1 image-anime">
-											<img src={member.image} alt={member.name} style={{ width: '100%', height: '400px', objectFit: 'cover', borderRadius: '10px' }} />
-											<ul>
-												<li>
-													<Link href="/#"><i className="fa-brands fa-facebook-f" /></Link>
-												</li>
-												<li>
-													<Link href="/#"><i className="fa-brands fa-linkedin-in" /></Link>
-												</li>
-												<li>
-													<Link href="/#"><i className="fa-brands fa-instagram" /></Link>
-												</li>
-											</ul>
+											<Link href={`/team/${member.slug}`}>
+												<img src={member.image} alt={member.name} style={{ width: '100%', height: '400px', objectFit: 'cover', borderRadius: '10px' }} />
+											</Link>
 										</div>
 										<div className="space20" />
 										<div className="text-area">
-											<Link href="/team">{member.name}</Link>
+											<Link href={`/team/${member.slug}`}>{member.name}</Link>
 											<div className="space16" />
 											<p>{member.role}</p>
 										</div>
@@ -123,3 +105,4 @@ export default function Section4() {
 		</>
 	)
 }
+

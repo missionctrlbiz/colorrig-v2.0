@@ -52,23 +52,19 @@ export default function Header1({ scroll, isMobileMenu, handleMobileMenu, isSear
 											<a><img src="/assets/img/icons/search1.svg" alt="Search" /></a>
 										</div>
 										<ul>
+
 											<li>
-												<Link href="https://www.facebook.com/colorriglimited" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
-													<i className="fa-brands fa-facebook-f" />
-												</Link>
-											</li>
-											<li>
-												<Link href="https://www.instagram.com/colorriglimited" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+												<Link href="https://www.instagram.com/color.rig" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
 													<i className="fa-brands fa-instagram" />
 												</Link>
 											</li>
 											<li>
-												<Link href="https://www.linkedin.com/company/colorrig-limited" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+												<Link href="https://www.linkedin.com/company/color.rig" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
 													<i className="fa-brands fa-linkedin-in" />
 												</Link>
 											</li>
 											<li>
-												<Link href="https://www.youtube.com/@colorriglimited" target="_blank" rel="noopener noreferrer" aria-label="YouTube" className="m-0">
+												<Link href="https://www.youtube.com/@color.rig" target="_blank" rel="noopener noreferrer" aria-label="YouTube" className="m-0">
 													<i className="fa-brands fa-youtube" />
 												</Link>
 											</li>

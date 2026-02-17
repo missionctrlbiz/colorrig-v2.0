@@ -1,5 +1,6 @@
 'use client'
 import Layout from "@/components/layout/Layout"
+import InnerHeader from '@/components/layout/InnerHeader'
 import Link from "next/link"
 import { useState } from "react"
 
@@ -70,19 +71,7 @@ export default function Faq() {
         <>
             <Layout headerStyle={1} footerStyle={1}>
                 <div>
-                    <div className="inner-page-header" style={{ backgroundImage: 'url(/assets/img/bg/header-bg15.png)' }}>
-                        <div className="container">
-                            <div className="row">
-                                <div className="col-lg-9 m-auto">
-                                    <div className="heading1 text-center">
-                                        <h1>Frequently Asked Questions</h1>
-                                        <div className="space20" />
-                                        <Link href="/">Home <i className="fa-solid fa-angle-right" /> <span>FAQs</span></Link>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    <InnerHeader title="Frequently Asked Questions" breadcrumb="FAQs" />
                     {/*===== HERO AREA ENDS =======*/}
                     {/*===== FAQ AREA STARTS =======*/}
                     <div className="faq-inner-section-area sp1">

@@ -20,7 +20,7 @@ const clientLogos = [
 
 const swiperOptions = {
     modules: [Autoplay],
-    slidesPerView: 5,
+    slidesPerView: 3,
     spaceBetween: 40,
     autoplay: {
         delay: 2000,
@@ -29,23 +29,28 @@ const swiperOptions = {
     loop: true,
     breakpoints: {
         320: {
-            slidesPerView: 2,
+            slidesPerView: 1,
+            slidesPerGroup: 1,
             spaceBetween: 20,
         },
         575: {
-            slidesPerView: 3,
+            slidesPerView: 2,
+            slidesPerGroup: 2,
             spaceBetween: 30,
         },
         767: {
-            slidesPerView: 4,
+            slidesPerView: 2,
+            slidesPerGroup: 2,
             spaceBetween: 30,
         },
         991: {
-            slidesPerView: 5,
+            slidesPerView: 3,
+            slidesPerGroup: 3,
             spaceBetween: 40,
         },
         1199: {
-            slidesPerView: 6,
+            slidesPerView: 3,
+            slidesPerGroup: 3,
             spaceBetween: 40,
         },
     }

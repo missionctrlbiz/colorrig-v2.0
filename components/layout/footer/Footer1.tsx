@@ -1,5 +1,13 @@
 import Link from 'next/link'
 
+const recentProjects = [
+	'/images/colorrig-1.jpg',
+	'/images/colorrig-2.jpg',
+	'/images/colorrig-3.jpg',
+	'/images/colorrig-6.jpg',
+	'/images/colorrig-7.jpg',
+	'/images/colorrig-8.jpg',
+]
 
 export default function Footer1() {
 	return (
@@ -15,16 +23,13 @@ export default function Footer1() {
 								<div className="space24" />
 								<ul>
 									<li>
-										<Link href="/#"><i className="fa-brands fa-facebook-f" /></Link>
+										<Link href="https://www.instagram.com/color.rig" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i className="fa-brands fa-instagram" /></Link>
 									</li>
 									<li>
-										<Link href="/#"><i className="fa-brands fa-instagram" /></Link>
+										<Link href="https://www.linkedin.com/company/color.rig" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i className="fa-brands fa-linkedin-in" /></Link>
 									</li>
 									<li>
-										<Link href="/#"><i className="fa-brands fa-linkedin-in" /></Link>
-									</li>
-									<li>
-										<Link href="/#" className="m-0"><i className="fa-brands fa-youtube" /></Link>
+										<Link href="https://www.youtube.com/@color.rig" target="_blank" rel="noopener noreferrer" aria-label="YouTube" className="m-0"><i className="fa-brands fa-youtube" /></Link>
 									</li>
 								</ul>
 							</div>
@@ -35,9 +40,9 @@ export default function Footer1() {
 								<ul>
 									<li><Link href="/about">About Us</Link></li>
 									<li><Link href="/solutions">Solutions</Link></li>
-									<li><Link href="/portfolio">Portfolio</Link></li>
-									<li><Link href="/blog">Blog</Link></li>
 									<li><Link href="/contact">Contact</Link></li>
+									<li><Link href="/privacy-policy">Privacy Policy</Link></li>
+									<li><Link href="/terms-and-conditions">T&apos;s &amp; C&apos;s</Link></li>
 								</ul>
 							</div>
 						</div>
@@ -46,7 +51,7 @@ export default function Footer1() {
 								<h3>Contact Us</h3>
 								<ul>
 									<li>
-										<Link href="/tel:+2348133555696"><img src="/assets/img/icons/phn1.svg" alt="" />+234 813 355 5696</Link>
+										<Link href="tel:+2348133555696"><img src="/assets/img/icons/phn1.svg" alt="" />+234 813 355 5696</Link>
 									</li>
 									<li>
 										<Link href="/#"><img src="/assets/img/icons/location1.svg" alt="" />Lagos, Nigeria</Link>
@@ -55,7 +60,7 @@ export default function Footer1() {
 										<Link href="mailto:info@colorrig.com.ng"><img src="/assets/img/icons/mail1.svg" alt="" />info@colorrig.com.ng</Link>
 									</li>
 									<li>
-										<Link href="https://colorrig.com.ng"> <img src="/assets/img/icons/world1.svg" alt="" />colorrig.com.ng</Link>
+										<Link href="https://colorrig.com.ng"><img src="/assets/img/icons/world1.svg" alt="" />colorrig.com.ng</Link>
 									</li>
 								</ul>
 							</div>
@@ -64,47 +69,29 @@ export default function Footer1() {
 							<div className="footer-social-box">
 								<h3>Recent Projects</h3>
 								<div className="space12" />
-								<div className="row">
-									<div className="col-lg-4 col-md-4 col-4">
-										<div className="img1">
-											<img src="/images/colorrig-1.jpg" alt="" style={{ width: '100%', height: '80px', objectFit: 'cover', borderRadius: '4px' }} />
+								<div className="row" style={{ gap: '8px 0' }}>
+									{recentProjects.map((img, i) => (
+										<div key={i} className="col-lg-4 col-md-4 col-4">
+											<Link href="/portfolio" style={{ display: 'block', overflow: 'hidden', borderRadius: '6px' }}>
+												<img
+													src={img}
+													alt={`Project ${i + 1}`}
+													style={{ width: '100%', height: '80px', objectFit: 'cover', display: 'block', transition: 'transform 0.3s ease' }}
+													onMouseOver={(e) => (e.currentTarget.style.transform = 'scale(1.1)')}
+													onMouseOut={(e) => (e.currentTarget.style.transform = 'scale(1)')}
+												/>
+											</Link>
 										</div>
-									</div>
-									<div className="col-lg-4 col-md-4 col-4">
-										<div className="img1">
-											<img src="/images/colorrig-2.jpg" alt="" style={{ width: '100%', height: '80px', objectFit: 'cover', borderRadius: '4px' }} />
-										</div>
-									</div>
-									<div className="col-lg-4 col-md-4 col-4">
-										<div className="img1">
-											<img src="/images/colorrig-3.jpg" alt="" style={{ width: '100%', height: '80px', objectFit: 'cover', borderRadius: '4px' }} />
-										</div>
-									</div>
-									<div className="col-lg-4 col-md-4 col-4">
-										<div className="img1">
-											<img src="/images/colorrig-6.jpg" alt="" style={{ width: '100%', height: '80px', objectFit: 'cover', borderRadius: '4px' }} />
-										</div>
-									</div>
-									<div className="col-lg-4 col-md-4 col-4">
-										<div className="img1">
-											<img src="/images/colorrig-7.jpg" alt="" style={{ width: '100%', height: '80px', objectFit: 'cover', borderRadius: '4px' }} />
-										</div>
-									</div>
-									<div className="col-lg-4 col-md-4 col-4">
-										<div className="img1">
-											<img src="/images/colorrig-8.jpg" alt="" style={{ width: '100%', height: '80px', objectFit: 'cover', borderRadius: '4px' }} />
-										</div>
-									</div>
+									))}
 								</div>
 							</div>
 						</div>
 					</div>
-					<div className="space60" />
 					<div className="row">
 						<div className="col-lg-12">
-							<div className="copyright" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-								<p style={{ margin: 0 }}>© Copyright {new Date().getFullYear()} - <Link href="/">Colorrig Limited</Link>. All Rights Reserved</p>
-								<p style={{ margin: 0 }}>Made with ❤️ by <Link href="https://missionctrl.com.ng" target="_blank" rel="noopener noreferrer">MissionCTRL Labs</Link></p>
+							<div className="copyright" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', borderTop: '1px solid rgba(255,255,255,0.15)', paddingTop: '24px', marginTop: '40px' }}>
+								<p style={{ margin: 0 }}>© {new Date().getFullYear()} <Link href="/" style={{ color: 'inherit' }}>Colorrig Limited</Link>. All Rights Reserved</p>
+								<p style={{ margin: 0 }}>Made with ❤️ by <Link href="https://missionctrl.com.ng" target="_blank" rel="noopener noreferrer" style={{ color: '#070327', fontWeight: 600 }}>MissionCTRL Labs</Link></p>
 							</div>
 						</div>
 					</div>

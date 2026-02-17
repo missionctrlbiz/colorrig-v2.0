@@ -4,6 +4,7 @@ import ModalVideo from 'react-modal-video'
 import "@/node_modules/react-modal-video/css/modal-video.css"
 import Countdown from '@/components/elements/Countdown'
 import Layout from "@/components/layout/Layout"
+import InnerHeader from '@/components/layout/InnerHeader'
 import Link from "next/link"
 export default function BlogSingle() {
 
@@ -13,19 +14,7 @@ export default function BlogSingle() {
 
 			<Layout headerStyle={1} footerStyle={1}>
 				<div>
-					<div className="inner-page-header" style={{ backgroundImage: 'url(assets/img/bg/header-bg14.png)' }}>
-						<div className="container">
-							<div className="row">
-								<div className="col-lg-6 m-auto">
-									<div className="heading1 text-center">
-										<h1>Blog Details</h1>
-										<div className="space20" />
-										<Link href="/">Home <i className="fa-solid fa-angle-right" /> <span>Blog Details</span></Link>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
+					<InnerHeader title="Blog Details" breadcrumb="Blog Details" />
 					{/*===== HERO AREA ENDS =======*/}
 					{/*===== BLOG AREA STARTS =======*/}
 					<div className="blog-details-section sp8">
@@ -282,7 +271,7 @@ export default function BlogSingle() {
 								<div className="col-lg-10 m-auto">
 									<div className="cta1-main-boxarea">
 										<div className="timer-btn-area">
-										<Countdown />
+											<Countdown />
 											<div className="btn-area1">
 												<Link href="/pricing-plan" className="vl-btn1">Buy Ticket</Link>
 											</div>
@@ -308,7 +297,7 @@ export default function BlogSingle() {
 								<div className="col-lg-10 m-auto">
 									<div className="cta1-main-boxarea">
 										<div className="timer-btn-area">
-										<Countdown />
+											<Countdown />
 											<div className="btn-area1">
 												<Link href="/pricing-plan" className="vl-btn1">Buy Ticket</Link>
 											</div>

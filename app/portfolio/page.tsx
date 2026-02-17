@@ -1,5 +1,7 @@
 import Layout from "@/components/layout/Layout"
+import InnerHeader from '@/components/layout/InnerHeader'
 import Link from "next/link"
+import EventGenericCTA from "@/components/common/cta/EventGenericCTA"
 import { portfolioData } from "./portfolioData"
 
 export default function Portfolio() {
@@ -7,19 +9,7 @@ export default function Portfolio() {
         <>
             <Layout headerStyle={1} footerStyle={1}>
                 <div>
-                    <div className="inner-page-header" style={{ backgroundImage: 'url(/assets/img/bg/header-bg8.png)' }}>
-                        <div className="container">
-                            <div className="row">
-                                <div className="col-lg-6 m-auto">
-                                    <div className="heading1 text-center">
-                                        <h1>Our Portfolio</h1>
-                                        <div className="space20" />
-                                        <Link href="/">Home <i className="fa-solid fa-angle-right" /> <span>Portfolio</span></Link>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    <InnerHeader title="Our Portfolio" breadcrumb="Portfolio" />
                     {/*===== HERO AREA ENDS =======*/}
                     {/*===== PORTFOLIO AREA STARTS =======*/}
                     <div className="event-team-area sp1">
@@ -72,7 +62,9 @@ export default function Portfolio() {
                         </div>
                     </div>
                 </div>
-            </Layout>
+                <EventGenericCTA />
+
+            </Layout >
         </>
     )
 }

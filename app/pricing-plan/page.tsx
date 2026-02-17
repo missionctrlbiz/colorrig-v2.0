@@ -1,6 +1,7 @@
 
 import Countdown from '@/components/elements/Countdown'
 import Layout from "@/components/layout/Layout"
+import InnerHeader from '@/components/layout/InnerHeader'
 import Link from "next/link"
 export default function PricingPlan() {
 
@@ -9,19 +10,7 @@ export default function PricingPlan() {
 
 			<Layout headerStyle={1} footerStyle={1}>
 				<div>
-					<div className="inner-page-header" style={{ backgroundImage: 'url(assets/img/bg/header-bg16.png)' }}>
-						<div className="container">
-							<div className="row">
-								<div className="col-lg-9 m-auto">
-									<div className="heading1 text-center">
-										<h1>Pricing Plan</h1>
-										<div className="space20" />
-										<Link href="/">Home <i className="fa-solid fa-angle-right" /> <span>Pricing Plan</span></Link>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
+					<InnerHeader title="Pricing Plan" breadcrumb="Pricing Plan" />
 					{/*===== HERO AREA ENDS =======*/}
 					{/*===== PRICING AREA STARTS =======*/}
 					<div className="pricing-lan-section-area sp1">
@@ -104,7 +93,7 @@ export default function PricingPlan() {
 								<div className="col-lg-10 m-auto">
 									<div className="cta1-main-boxarea">
 										<div className="timer-btn-area">
-										<Countdown />
+											<Countdown />
 											<div className="btn-area1">
 												<Link href="/pricing-plan" className="vl-btn1">Buy Ticket</Link>
 											</div>
@@ -130,7 +119,7 @@ export default function PricingPlan() {
 								<div className="col-lg-10 m-auto">
 									<div className="cta1-main-boxarea">
 										<div className="timer-btn-area">
-										<Countdown />
+											<Countdown />
 											<div className="btn-area1">
 												<Link href="/pricing-plan" className="vl-btn1">Buy Ticket</Link>
 											</div>

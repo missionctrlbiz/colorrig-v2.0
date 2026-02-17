@@ -2,6 +2,7 @@
 import Link from 'next/link'
 import { Autoplay, Navigation, Pagination } from "swiper/modules"
 import { Swiper, SwiperSlide } from "swiper/react"
+import { portfolioData } from '@/app/portfolio/portfolioData'
 
 const swiperOptions = {
     modules: [Autoplay, Pagination, Navigation],
@@ -44,18 +45,10 @@ const swiperOptions = {
     }
 }
 
-const galleryItems = [
-    { image: "/images/ADSC-2019.jpg", title: "Africa Digital Sports Conference", category: "Conference" },
-    { image: "/images/SMWLagos (1).jpg", title: "Social Media Week Lagos", category: "Conference" },
-    { image: "/images/First-Bank-Awards.jpg", title: "First Bank FAMA Awards", category: "Awards" },
-    { image: "/images/Governor Sanwo-Olu Xmas.jpg", title: "Gov. Sanwo-Olu Healthcare", category: "Government" },
-    { image: "/images/Felabration 2017.jpg", title: "Felabration 2017", category: "Music & Arts" },
-    { image: "/images/She-Speaks.jpg", title: "She Leads Africa", category: "Conference" },
-    { image: "/images/Unilag Covocation.jpg", title: "UNILAG Convocation", category: "Education" },
-    { image: "/images/PSG-U-11-2023-2-Medium.jpg", title: "U-11 PSG Games", category: "Sports" },
-]
-
 export default function Section6() {
+    const selectedEventIds = [1, 5, 7, 4, 11, 9, 10, 12];
+    const galleryItems = portfolioData.filter(item => selectedEventIds.includes(item.id));
+
     return (
         <>
             <div className="memory1-section-area sp1">
@@ -75,16 +68,18 @@ export default function Section6() {
                                 {galleryItems.map((item, index) => (
                                     <SwiperSlide className="memory-boxarea" key={index}>
                                         <div className="img1 image-anime">
-                                            <img src={item.image} alt={item.title} style={{ width: '100%', height: '350px', objectFit: 'cover' }} />
+                                            <Link href={`/portfolio/${item.slug}`}>
+                                                <img src={item.image} alt={item.title} style={{ width: '100%', height: '350px', objectFit: 'cover' }} />
+                                            </Link>
                                         </div>
                                         <div className="content-area">
                                             <div className="arrow">
-                                                <Link href="/portfolio"><i className="fa-solid fa-arrow-right" /></Link>
+                                                <Link href={`/portfolio/${item.slug}`}><i className="fa-solid fa-arrow-right" /></Link>
                                             </div>
                                             <div className="space18" />
                                             <p>{item.category}</p>
                                             <div className="space12" />
-                                            <Link href="/portfolio">{item.title}</Link>
+                                            <Link href={`/portfolio/${item.slug}`}>{item.shortTitle}</Link>
                                         </div>
                                     </SwiperSlide>
                                 ))}
@@ -105,3 +100,5 @@ export default function Section6() {
         </>
     )
 }
+
+

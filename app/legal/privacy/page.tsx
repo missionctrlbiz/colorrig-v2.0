@@ -1,4 +1,5 @@
 import Layout from "@/components/layout/Layout"
+import InnerHeader from '@/components/layout/InnerHeader'
 import Link from "next/link"
 
 export default function PrivacyPolicy() {
@@ -6,19 +7,7 @@ export default function PrivacyPolicy() {
         <>
             <Layout headerStyle={1} footerStyle={1}>
                 <div>
-                    <div className="inner-page-header" style={{ backgroundImage: 'url(/assets/img/bg/header-bg12.png)' }}>
-                        <div className="container">
-                            <div className="row">
-                                <div className="col-lg-6 m-auto">
-                                    <div className="heading1 text-center">
-                                        <h1>Privacy Policy</h1>
-                                        <div className="space20" />
-                                        <Link href="/">Home <i className="fa-solid fa-angle-right" /> <span>Privacy Policy</span></Link>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    <InnerHeader title="Privacy Policy" breadcrumb="Privacy Policy" />
                     {/*===== HERO AREA ENDS =======*/}
                     {/*===== PRIVACY POLICY CONTENT =======*/}
                     <div className="sp1">

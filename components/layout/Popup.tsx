@@ -8,45 +8,47 @@ export default function Popup() {
 		const closeBtn = document.getElementById('close-popup') as HTMLElement | null
 		const noThanksBtn = document.querySelector('.no-thanks') as HTMLElement | null
 
-		if (popup) {
+		// Check localStorage
+		const isPopupCanceled = localStorage.getItem('popupCanceled')
+
+		if (popup && !isPopupCanceled) {
 			setTimeout(() => {
 				popup.style.display = 'flex'
 			}, 100)
 		}
 
+		const closePopup = () => {
+			if (popup) {
+				popup.style.display = 'none'
+				localStorage.setItem('popupCanceled', 'true')
+			}
+		}
+
 		if (closeBtn) {
-			closeBtn.addEventListener('click', () => {
-				if (popup) {
-					popup.style.display = 'none'
-				}
-			})
+			closeBtn.addEventListener('click', closePopup)
 		}
 
 		if (noThanksBtn) {
-			noThanksBtn.addEventListener('click', () => {
-				if (popup) {
-					popup.style.display = 'none'
-				}
-			})
+			noThanksBtn.addEventListener('click', closePopup)
 		}
 
 		return () => {
 			if (closeBtn) {
-				closeBtn.removeEventListener('click', () => { })
+				closeBtn.removeEventListener('click', closePopup)
 			}
 			if (noThanksBtn) {
-				noThanksBtn.removeEventListener('click', () => { })
+				noThanksBtn.removeEventListener('click', closePopup)
 			}
 		}
 	}, [])
 
 	return (
 		<>
-			<div id="popup" className="popup-overlay">
+			<div id="popup" className="popup-overlay" style={{ display: 'none' }}>
 				<div className="popup-content" style={{ background: '#070327' }}>
 					<span className="close-btn" id="close-popup">×</span>
 					<div className="popup-icon">
-						<img src="/images/Colorrig-White.png" alt="Colorrig Limited" style={{ maxWidth: '180px' }} />
+						<img src="/images/colorrig-favicon.png" alt="Colorrig Limited" style={{ maxWidth: '100px', margin: '0 auto' }} />
 					</div>
 					<div className="space32" />
 					<div className="heading2">
@@ -59,10 +61,14 @@ export default function Popup() {
 						</ul>
 					</div>
 					<div className="space50" />
-					<Link className="vl-btn1" href="/contact">
+					<Link className="vl-btn1" href="/contact" onClick={() => {
+						const popup = document.getElementById('popup')
+						if (popup) popup.style.display = 'none'
+						localStorage.setItem('popupCanceled', 'true')
+					}}>
 						Get Started
 					</Link>
-					<p className="no-thanks" style={{ color: '#999999' }}>No thanks</p>
+					<p className="no-thanks" style={{ color: '#999999', cursor: 'pointer' }}>I'll do this later</p>
 				</div>
 			</div>
 		</>

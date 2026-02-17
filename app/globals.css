@@ -4,7 +4,7 @@
  *
  * The Eventify template uses --ztc-* CSS custom properties.
  * We override them here to match Colorrig's brand palette:
- *   Primary Accent (Aqua):  #74fbfe   (replaces template yellow #FFBA00)
+ *   Primary Accent (Aqua):  #74fbfe   (replaces template yellow #FFBA00 AND lemon green #C0F037)
  *   Dark Blue:              #070327   (replaces template dark #1A1719)
  */
 
@@ -13,24 +13,154 @@
   --figtree: var(--font-mtn-brighter-sans), sans-serif;
   --grotesk: var(--font-mtn-brighter-sans), sans-serif;
 
-  /* ── Primary accent ── */
+  /* ── Primary accent (Aqua) — replaces ALL template accent colors ── */
   --ztc-text-text-4: #74fbfe;
+  /* was #FFBA00 yellow */
+  --ztc-text-text-6: #74fbfe;
+  /* was #C0F037 lemon green */
+  --ztc-text-text-10: #74fbfe;
+  /* was #FF3639 red accent */
+  --ztc-text-text-13: #74fbfe;
+  /* was #2E4DFD blue accent */
+  --ztc-text-text-14: #74fbfe;
+  /* was #FF6700 orange */
+  --ztc-text-text-20: #74fbfe;
+  /* was #4AF8BA green accent */
   --ztc-bg-bg-3: #74fbfe;
+  /* was #FFBA00 yellow bg */
+  --ztc-bg-bg-5: #74fbfe;
+  /* was #C0F037 lemon green bg */
+  --ztc-bg-bg-7: #74fbfe;
+  /* was #FF3639 red bg */
+  --ztc-bg-bg-9: #74fbfe;
+  /* was #2E4DFD blue bg */
+  --ztc-bg-bg-10: #74fbfe;
+  /* was #FF6700 orange bg */
+  --ztc-bg-bg-14: #74fbfe;
+  /* was #4AF8BA green bg */
 
-  /* ── Dark / secondary ── */
+  /* ── Dark / secondary — Colorrig brand dark blue ── */
   --ztc-text-text-2: #070327;
-  --ztc-bg-bg-2: #070327;
   --ztc-text-text-5: #070327;
-  --ztc-bg-bg-4: #070327;
+  --ztc-text-text-8: #070327;
   --ztc-text-text-11: #070327;
+  --ztc-bg-bg-2: #070327;
+  --ztc-bg-bg-4: #070327;
+  --ztc-bg-bg-6: #070327;
   --ztc-bg-bg-8: #070327;
 }
 
 /* Force MTN Brighter Sans on all elements */
 body,
-h1, h2, h3, h4, h5, h6,
-p, a, span, li, td, th,
-input, textarea, select, button,
-.nav-link, .vl-btn1, .vl-btn2 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+span,
+li,
+td,
+th,
+input,
+textarea,
+select,
+button,
+.nav-link,
+.vl-btn1,
+.vl-btn2 {
   font-family: var(--font-mtn-brighter-sans), sans-serif !important;
+}
+
+/* ── Inner page text readability ──
+   heading4 and contact sections inherit white text from template.
+   Override to dark text for light-background inner pages. */
+.heading4 h5,
+.heading4 h2,
+.heading4 h3,
+.heading4 h4 {
+  color: #070327 !important;
+}
+
+.heading4 p,
+.heading4 a {
+  color: #555 !important;
+}
+
+.heading4 a:hover {
+  color: #74fbfe !important;
+}
+
+.contact-auhtor-box h4,
+.contact-auhtor-box h5 {
+  color: #070327 !important;
+}
+
+.contact-auhtor-box a,
+.contact-auhtor-box p {
+  color: #555 !important;
+}
+
+.contact-auhtor-box a:hover {
+  color: #74fbfe !important;
+}
+
+/* About/Solutions intro section text */
+.about2-section-area h5,
+.about2-section-area h2,
+.about2-section-area h3 {
+  color: #070327 !important;
+}
+
+.about2-section-area p {
+  color: #555 !important;
+}
+
+/* Service/Solutions cards text */
+.service2-section-area h5,
+.service2-section-area h2,
+.service2-section-area h3 {
+  color: #070327 !important;
+}
+
+.service2-section-area p,
+.service2-section-area span {
+  color: #555 !important;
+}
+
+/* Contact form section text */
+.contact-inner-section h5,
+.contact-inner-section h2 {
+  color: #070327 !important;
+}
+
+.contact-inner-section p {
+  color: #666 !important;
+}
+
+/* Pricing box text */
+.pricing-boxarea h3 {
+  color: #070327 !important;
+}
+
+.pricing-boxarea p {
+  color: #555 !important;
+}
+
+/* ── Button fixes ── */
+.vl-btn2 {
+  background: transparent !important;
+}
+
+/* ── Breadcrumb links in inner page headers = Aqua ── */
+.inner-page-header .heading1 a {
+  color: #74fbfe !important;
+}
+
+/* ── Team card arc elements — shift purple gradient to blue ── */
+.our-team-boxarea .team-widget-area .elements21,
+.our-team-boxarea .team-widget-area .elements22 {
+  filter: hue-rotate(260deg) saturate(1.5);
 }

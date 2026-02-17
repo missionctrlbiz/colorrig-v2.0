@@ -1,6 +1,7 @@
 'use client'
 import Countdown from '@/components/elements/Countdown'
 import Layout from "@/components/layout/Layout"
+import InnerHeader from '@/components/layout/InnerHeader'
 import Link from "next/link"
 import { useState } from "react"
 export default function EventSingle() {
@@ -13,19 +14,7 @@ export default function EventSingle() {
 
 			<Layout headerStyle={1} footerStyle={1}>
 				<div>
-					<div className="inner-page-header" style={{ backgroundImage: 'url(assets/img/bg/header-bg9.png)' }}>
-						<div className="container">
-							<div className="row">
-								<div className="col-lg-6 m-auto">
-									<div className="heading1 text-center">
-										<h1>Event single</h1>
-										<div className="space20" />
-										<Link href="/">Home <i className="fa-solid fa-angle-right" /> <span>Event single</span></Link>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
+					<InnerHeader title="Event Single" breadcrumb="Event Single" />
 					{/*===== HERO AREA ENDS =======*/}
 					{/*===== EVENT AREA STARTS =======*/}
 					<div className="event-sidepage-section-area sp8">
@@ -55,7 +44,7 @@ export default function EventSingle() {
 															</div>
 															<ul>
 																<li>
-																	<Link href="/#" className="icon1"><i className="fa-brands fa-facebook-f" /></Link>
+																	<Link href="/#" className="icon1"><i className="fa-brands fa-youtube" /></Link>
 																</li>
 																<li>
 																	<Link href="/#" className="icon2"><i className="fa-brands fa-linkedin-in" /></Link>
@@ -89,7 +78,7 @@ export default function EventSingle() {
 															</div>
 															<ul>
 																<li>
-																	<Link href="/#" className="icon1"><i className="fa-brands fa-facebook-f" /></Link>
+																	<Link href="/#" className="icon1"><i className="fa-brands fa-youtube" /></Link>
 																</li>
 																<li>
 																	<Link href="/#" className="icon2"><i className="fa-brands fa-linkedin-in" /></Link>
@@ -123,7 +112,7 @@ export default function EventSingle() {
 															</div>
 															<ul>
 																<li>
-																	<Link href="/#" className="icon1"><i className="fa-brands fa-facebook-f" /></Link>
+																	<Link href="/#" className="icon1"><i className="fa-brands fa-youtube" /></Link>
 																</li>
 																<li>
 																	<Link href="/#" className="icon2"><i className="fa-brands fa-linkedin-in" /></Link>

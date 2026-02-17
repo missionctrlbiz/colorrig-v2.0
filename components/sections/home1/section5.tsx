@@ -1,7 +1,5 @@
 'use client'
 import { useState } from 'react'
-import ModalVideo from 'react-modal-video'
-import "@/node_modules/react-modal-video/css/modal-video.css"
 import Link from 'next/link'
 import { Autoplay, Navigation, Pagination } from "swiper/modules"
 import { Swiper, SwiperSlide } from "swiper/react"
@@ -37,7 +35,7 @@ const reasons = [
 	},
 	{
 		title: "Global Reach",
-		description: "Extend your event's reach through live streaming to multiple platforms including Facebook, YouTube, and Twitter.",
+		description: "Extend your event's reach through live streaming to multiple platforms including YouTube, Instagram, and LinkedIn.",
 		icon: "fa-solid fa-globe"
 	},
 	{
@@ -101,7 +99,46 @@ export default function Section5() {
 					</div>
 				</div>
 			</div>
-			<ModalVideo channel='youtube' isOpen={isOpen} videoId="JXMWOmuR1hU" onClose={() => setOpen(false)} />
+			{isOpen && (
+				<div
+					style={{
+						position: 'fixed',
+						top: 0,
+						left: 0,
+						width: '100%',
+						height: '100%',
+						backgroundColor: 'rgba(0,0,0,0.9)',
+						zIndex: 9999,
+						display: 'flex',
+						alignItems: 'center',
+						justifyContent: 'center',
+					}}
+					onClick={() => setOpen(false)}
+				>
+					<div onClick={(e) => e.stopPropagation()} style={{ width: '80%', maxWidth: '900px', position: 'relative' }}>
+						<button
+							onClick={() => setOpen(false)}
+							style={{
+								position: 'absolute',
+								top: '-40px',
+								right: '0',
+								background: 'none',
+								border: 'none',
+								color: '#fff',
+								fontSize: '30px',
+								cursor: 'pointer',
+							}}
+						>
+							&times;
+						</button>
+						<video controls autoPlay style={{ width: '100%', borderRadius: '10px' }}>
+							<source src="/images/adzinga-.mp4" type="video/mp4" />
+							Your browser does not support the video tag.
+						</video>
+					</div>
+				</div>
+			)}
 		</>
 	)
 }
+

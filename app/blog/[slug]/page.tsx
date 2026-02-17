@@ -1,4 +1,5 @@
 import Layout from "@/components/layout/Layout"
+import InnerHeader from '@/components/layout/InnerHeader'
 import Link from "next/link"
 import { blogPosts } from "../blogData"
 import { notFound } from "next/navigation"
@@ -21,21 +22,12 @@ export default async function BlogDetail({ params }: { params: Promise<{ slug: s
         <>
             <Layout headerStyle={1} footerStyle={1}>
                 <div>
-                    <div className="inner-page-header" style={{ backgroundImage: 'url(/assets/img/bg/header-bg13.png)' }}>
-                        <div className="container">
-                            <div className="row">
-                                <div className="col-lg-8 m-auto">
-                                    <div className="heading1 text-center">
-                                        <h1>{post.title}</h1>
-                                        <div className="space20" />
-                                        <Link href="/">Home <i className="fa-solid fa-angle-right" /></Link>{" "}
-                                        <Link href="/blog">The Live Link <i className="fa-solid fa-angle-right" /></Link>{" "}
-                                        <span>{post.title}</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    <InnerHeader
+                        title={post.title}
+                        breadcrumb={post.title}
+                        parentText="The Live Link"
+                        parentLink="/blog"
+                    />
                     {/*===== BLOG DETAIL STARTS =======*/}
                     <div className="blog-single-section-area sp1">
                         <div className="container">
