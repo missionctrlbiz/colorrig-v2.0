@@ -10,7 +10,7 @@ Colorrig v2.0 is a Next.js 15 application designed to showcase Colorrig Limited'
     *   Ensure all components (Headers, Footers, Sliders, Sections) match the reference identically.
 
 2.  **Branding Integration**:
-    *   **Primary Colors**: Aqua (`#74fbfe`) and Dark Blue (`#070327`).
+    *   **Primary Colors**: Aqua (`#00bcd4`) and Dark Blue (`#070327`).
     *   **Typography**: Specific font pairings as per design.
     *   **Content**: Replace generic template text with Colorrig's service offerings, mission, and team details.
 

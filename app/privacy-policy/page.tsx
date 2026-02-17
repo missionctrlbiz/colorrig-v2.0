@@ -36,7 +36,7 @@ export default function PrivacyPolicy() {
                                     <p style={{ marginBottom: '24px' }}>We may update this Privacy Policy from time to time. We will notify you of any changes by posting the new policy on this page and updating the &quot;Last updated&quot; date.</p>
 
                                     <h4 style={{ color: '#070327', marginBottom: '12px' }}>8. Contact Us</h4>
-                                    <p style={{ marginBottom: '24px' }}>If you have any questions about this Privacy Policy, please contact us at <a href="mailto:info@colorrig.com.ng" style={{ color: '#74fbfe' }}>info@colorrig.com.ng</a>.</p>
+                                    <p style={{ marginBottom: '24px' }}>If you have any questions about this Privacy Policy, please contact us at <a href="mailto:info@colorrig.com.ng" style={{ color: '#00bcd4' }}>info@colorrig.com.ng</a>.</p>
                                 </div>
                             </div>
                         </div>

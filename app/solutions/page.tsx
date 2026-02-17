@@ -84,13 +84,13 @@ export default function Solutions() {
                                         <div className="others-boxarea" data-aos="fade-left" data-aos-duration={1000}>
                                             <div className="icons-box">
                                                 <div className="icons">
-                                                    <i className="fa-solid fa-trophy" style={{ color: '#74fbfe', fontSize: '24px' }} />
+                                                    <i className="fa-solid fa-trophy" style={{ color: '#00bcd4', fontSize: '24px' }} />
                                                 </div>
                                                 <p><span style={{ fontWeight: 700, fontSize: '28px' }}>200+</span> Events Delivered</p>
                                             </div>
                                             <div className="icons-box">
                                                 <div className="icons">
-                                                    <i className="fa-solid fa-users" style={{ color: '#74fbfe', fontSize: '24px' }} />
+                                                    <i className="fa-solid fa-users" style={{ color: '#00bcd4', fontSize: '24px' }} />
                                                 </div>
                                                 <p><span style={{ fontWeight: 700, fontSize: '28px' }}>50+</span> Trusted Clients</p>
                                             </div>
@@ -123,14 +123,14 @@ export default function Solutions() {
                                         <div className="pricing-boxarea" style={{ marginBottom: '30px', padding: '30px', minHeight: '380px', display: 'flex', flexDirection: 'column' }}>
                                             <div className="ticket-box" style={{ flex: 1 }}>
                                                 <div style={{ width: '90px', height: '90px', borderRadius: '50%', background: 'rgba(116, 251, 254, 0.1)', display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: '20px' }}>
-                                                    <i className={solution.icon} style={{ fontSize: '40px', color: '#74fbfe' }} />
+                                                    <i className={solution.icon} style={{ fontSize: '40px', color: '#00bcd4' }} />
                                                 </div>
                                                 <h3>{solution.title}</h3>
                                                 <p style={{ marginBottom: '20px', lineHeight: '1.7' }}>{solution.description}</p>
                                                 <ul style={{ listStyle: 'none', padding: 0, margin: 0 }}>
                                                     {solution.features.map((feature, i) => (
                                                         <li key={i} style={{ padding: '6px 0', display: 'flex', alignItems: 'center', gap: '10px' }}>
-                                                            <i className="fa-solid fa-check" style={{ color: '#74fbfe', fontSize: '18px' }} />
+                                                            <i className="fa-solid fa-check" style={{ color: '#00bcd4', fontSize: '18px' }} />
                                                             <span>{feature}</span>
                                                         </li>
                                                     ))}
@@ -143,6 +143,199 @@ export default function Solutions() {
                                         </div>
                                     </div>
                                 ))}
+                            </div>
+                        </div>
+                    </div>
+
+                    {/* LiveU Solutions Section */}
+                    <div id="liveu" className="about1-section-area sp1" style={{ backgroundColor: 'var(--ztc-bg-bg-1)' }}>
+                        <div className="container">
+                            <div className="row align-items-center">
+                                <div className="col-lg-6">
+                                    <div className="about-images-area">
+                                        <div className="img1 image-anime reveal">
+                                            <img
+                                                src="/images/colorrig-20.jpg"
+                                                alt="LiveU Portable Broadcasting Solutions"
+                                                style={{
+                                                    width: '100%',
+                                                    borderRadius: '12px',
+                                                    boxShadow: '0 20px 60px rgba(0,0,0,0.15)'
+                                                }}
+                                            />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="col-lg-6">
+                                    <div className="about1-textarea heading2" style={{ paddingLeft: '40px' }}>
+                                        <h5 data-aos="fade-up" data-aos-duration={800} style={{ color: '#00bcd4', fontWeight: '700', textTransform: 'uppercase', letterSpacing: '1px' }}>LiveU Solutions</h5>
+                                        <div className="space20" />
+                                        <h2 className="text-anime-style-3" style={{ fontSize: '42px', lineHeight: '1.2', marginBottom: '20px' }}>
+                                            Broadcast From Anywhere. Stream Everywhere.
+                                        </h2>
+                                        <div className="space16" />
+                                        <p style={{ fontSize: '17px', lineHeight: '1.8', marginBottom: '24px', color: '#555' }}>
+                                            Colorrig Limited is a certified LiveU partner, bringing you the world's most advanced portable live video transmission technology. With LiveU, we enable reliable, broadcast-quality live streaming from virtually any location using bonded cellular connectivity—perfect for outdoor events, remote locations, on-the-go reporting, and mobile broadcasts.
+                                        </p>
+
+                                        {/* Benefits Grid */}
+                                        <div className="row" style={{ marginBottom: '32px' }}>
+                                            <div className="col-lg-6 col-md-6" data-aos="fade-up" data-aos-duration={900}>
+                                                <div style={{ display: 'flex', gap: '16px', marginBottom: '20px' }}>
+                                                    <div style={{
+                                                        width: '50px',
+                                                        height: '50px',
+                                                        borderRadius: '50%',
+                                                        background: 'rgba(116, 251, 254, 0.1)',
+                                                        display: 'flex',
+                                                        alignItems: 'center',
+                                                        justifyContent: 'center',
+                                                        flexShrink: 0
+                                                    }}>
+                                                        <i className="fa-solid fa-signal" style={{ fontSize: '22px', color: '#00bcd4' }} />
+                                                    </div>
+                                                    <div>
+                                                        <h5 style={{ fontSize: '16px', fontWeight: '700', marginBottom: '6px' }}>Bonded Cellular</h5>
+                                                        <p style={{ fontSize: '14px', color: '#666', margin: 0 }}>Multiple network aggregation for ultra-reliable connectivity</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div className="col-lg-6 col-md-6" data-aos="fade-up" data-aos-duration={1000}>
+                                                <div style={{ display: 'flex', gap: '16px', marginBottom: '20px' }}>
+                                                    <div style={{
+                                                        width: '50px',
+                                                        height: '50px',
+                                                        borderRadius: '50%',
+                                                        background: 'rgba(116, 251, 254, 0.1)',
+                                                        display: 'flex',
+                                                        alignItems: 'center',
+                                                        justifyContent: 'center',
+                                                        flexShrink: 0
+                                                    }}>
+                                                        <i className="fa-solid fa-video" style={{ fontSize: '22px', color: '#00bcd4' }} />
+                                                    </div>
+                                                    <div>
+                                                        <h5 style={{ fontSize: '16px', fontWeight: '700', marginBottom: '6px' }}>Broadcast Quality</h5>
+                                                        <p style={{ fontSize: '14px', color: '#666', margin: 0 }}>Professional HD/4K video quality for your live streams</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div className="col-lg-6 col-md-6" data-aos="fade-up" data-aos-duration={1100}>
+                                                <div style={{ display: 'flex', gap: '16px', marginBottom: '20px' }}>
+                                                    <div style={{
+                                                        width: '50px',
+                                                        height: '50px',
+                                                        borderRadius: '50%',
+                                                        background: 'rgba(116, 251, 254, 0.1)',
+                                                        display: 'flex',
+                                                        alignItems: 'center',
+                                                        justifyContent: 'center',
+                                                        flexShrink: 0
+                                                    }}>
+                                                        <i className="fa-solid fa-location-dot" style={{ fontSize: '22px', color: '#00bcd4' }} />
+                                                    </div>
+                                                    <div>
+                                                        <h5 style={{ fontSize: '16px', fontWeight: '700', marginBottom: '6px' }}>Anywhere Coverage</h5>
+                                                        <p style={{ fontSize: '14px', color: '#666', margin: 0 }}>Stream from remote locations, stadiums, or moving vehicles</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div className="col-lg-6 col-md-6" data-aos="fade-up" data-aos-duration={1200}>
+                                                <div style={{ display: 'flex', gap: '16px', marginBottom: '20px' }}>
+                                                    <div style={{
+                                                        width: '50px',
+                                                        height: '50px',
+                                                        borderRadius: '50%',
+                                                        background: 'rgba(116, 251, 254, 0.1)',
+                                                        display: 'flex',
+                                                        alignItems: 'center',
+                                                        justifyContent: 'center',
+                                                        flexShrink: 0
+                                                    }}>
+                                                        <i className="fa-solid fa-shield-halved" style={{ fontSize: '22px', color: '#00bcd4' }} />
+                                                    </div>
+                                                    <div>
+                                                        <h5 style={{ fontSize: '16px', fontWeight: '700', marginBottom: '6px' }}>Redundant Systems</h5>
+                                                        <p style={{ fontSize: '14px', color: '#666', margin: 0 }}>Built-in redundancy ensures uninterrupted broadcasting</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div className="col-lg-6 col-md-6" data-aos="fade-up" data-aos-duration={1300}>
+                                                <div style={{ display: 'flex', gap: '16px', marginBottom: '20px' }}>
+                                                    <div style={{
+                                                        width: '50px',
+                                                        height: '50px',
+                                                        borderRadius: '50%',
+                                                        background: 'rgba(116, 251, 254, 0.1)',
+                                                        display: 'flex',
+                                                        alignItems: 'center',
+                                                        justifyContent: 'center',
+                                                        flexShrink: 0
+                                                    }}>
+                                                        <i className="fa-solid fa-gauge-high" style={{ fontSize: '22px', color: '#00bcd4' }} />
+                                                    </div>
+                                                    <div>
+                                                        <h5 style={{ fontSize: '16px', fontWeight: '700', marginBottom: '6px' }}>Low Latency</h5>
+                                                        <p style={{ fontSize: '14px', color: '#666', margin: 0 }}>Minimal delay for real-time audience interaction</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div className="col-lg-6 col-md-6" data-aos="fade-up" data-aos-duration={1400}>
+                                                <div style={{ display: 'flex', gap: '16px', marginBottom: '20px' }}>
+                                                    <div style={{
+                                                        width: '50px',
+                                                        height: '50px',
+                                                        borderRadius: '50%',
+                                                        background: 'rgba(116, 251, 254, 0.1)',
+                                                        display: 'flex',
+                                                        alignItems: 'center',
+                                                        justifyContent: 'center',
+                                                        flexShrink: 0
+                                                    }}>
+                                                        <i className="fa-solid fa-briefcase" style={{ fontSize: '22px', color: '#00bcd4' }} />
+                                                    </div>
+                                                    <div>
+                                                        <h5 style={{ fontSize: '16px', fontWeight: '700', marginBottom: '6px' }}>Portable Solutions</h5>
+                                                        <p style={{ fontSize: '14px', color: '#666', margin: 0 }}>Compact, lightweight units for maximum mobility</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        {/* Contact & CTA */}
+                                        <div className="space24" />
+                                        <div style={{
+                                            background: 'rgba(116, 251, 254, 0.05)',
+                                            padding: '24px',
+                                            borderRadius: '12px',
+                                            border: '1px solid rgba(116, 251, 254, 0.2)',
+                                            marginBottom: '24px'
+                                        }}>
+                                            <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '12px' }}>
+                                                <i className="fa-solid fa-phone" style={{ fontSize: '20px', color: '#00bcd4' }} />
+                                                <div>
+                                                    <p style={{ margin: 0, fontSize: '14px', color: '#666' }}>Talk to a LiveU Specialist</p>
+                                                    <a href="tel:+2349060157919" style={{ fontSize: '18px', fontWeight: '700', color: '#070327' }}>+234 906 015 7919</a>
+                                                </div>
+                                            </div>
+                                            <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
+                                                <i className="fa-solid fa-envelope" style={{ fontSize: '20px', color: '#00bcd4' }} />
+                                                <div>
+                                                    <p style={{ margin: 0, fontSize: '14px', color: '#666' }}>Email Us</p>
+                                                    <a href="mailto:info@colorrig.com" style={{ fontSize: '18px', fontWeight: '700', color: '#070327' }}>info@colorrig.com</a>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div className="btn-area1" data-aos="fade-up" data-aos-duration={1500}>
+                                            <Link href="/contact" className="vl-btn1">Request LiveU Demo
+                                                <svg width={12} height={12} viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M1 11L11 1M11 1H1M11 1V11" stroke="white" strokeLinecap="round" strokeLinejoin="round" />
+                                                </svg>
+                                            </Link>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>

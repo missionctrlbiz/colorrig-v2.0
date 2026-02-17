@@ -39,7 +39,7 @@ export default function TermsAndConditions() {
                                     <p style={{ marginBottom: '24px' }}>These Terms and Conditions are governed by the laws of the Federal Republic of Nigeria. Any disputes arising from these terms shall be resolved in the courts of Lagos State, Nigeria.</p>
 
                                     <h4 style={{ color: '#070327', marginBottom: '12px' }}>9. Contact Us</h4>
-                                    <p style={{ marginBottom: '24px' }}>For questions regarding these Terms and Conditions, please contact us at <a href="mailto:info@colorrig.com.ng" style={{ color: '#74fbfe' }}>info@colorrig.com.ng</a>.</p>
+                                    <p style={{ marginBottom: '24px' }}>For questions regarding these Terms and Conditions, please contact us at <a href="mailto:info@colorrig.com.ng" style={{ color: '#00bcd4' }}>info@colorrig.com.ng</a>.</p>
                                 </div>
                             </div>
                         </div>

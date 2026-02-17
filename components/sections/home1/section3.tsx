@@ -66,11 +66,11 @@ export default function Section3() {
                             <Swiper {...swiperOptions} className="event-slider-area">
                                 {displayItems.map((item, index) => (
                                     <SwiperSlide key={item.id}>
-                                        <div className="tabs-widget-boxarea" style={{ marginBottom: '30px', height: '100%' }}>
+                                        <div className="tabs-widget-boxarea">
                                             <div className="img1">
-                                                <img src={item.image} alt={item.shortTitle} style={{ width: '100%', height: '250px', objectFit: 'cover', borderRadius: '10px' }} />
+                                                <img src={item.image} alt={item.shortTitle} />
                                             </div>
-                                            <div className="content-area" style={{ padding: '20px' }}>
+                                            <div className="content-area">
                                                 <ul>
                                                     <li>
                                                         <span><img src="/assets/img/icons/clock1.svg" alt="" /> {item.date}</span>
@@ -79,7 +79,7 @@ export default function Section3() {
                                                 <div className="space20" />
                                                 <Link href={`/portfolio/${item.slug}`} className="head">{item.shortTitle}</Link>
                                                 <div className="space16" />
-                                                <p style={{ display: '-webkit-box', WebkitLineClamp: 3, WebkitBoxOrient: 'vertical', overflow: 'hidden' }}>{item.excerpt}</p>
+                                                <p>{item.excerpt}</p>
                                                 <div className="space32" />
                                                 <div className="btn-area1">
                                                     <Link href={`/portfolio/${item.slug}`} className="vl-btn1">View Details</Link>
@@ -89,15 +89,6 @@ export default function Section3() {
                                     </SwiperSlide>
                                 ))}
                             </Swiper>
-
-                            <div className="owl-nav">
-                                <button type="button" role="presentation" className="owl-prev h1p">
-                                    <i className="fa-solid fa-angle-left" />
-                                </button>
-                                <button type="button" role="presentation" className="owl-next h1n">
-                                    <i className="fa-solid fa-angle-right" />
-                                </button>
-                            </div>
                         </div>
                     </div>
                     <div className="space30" />

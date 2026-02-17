@@ -37,7 +37,7 @@ export default function Blog() {
                                             </div>
                                             <div className="content-area" style={{ padding: '24px' }}>
                                                 <div className="d-flex align-items-center gap-2 flex-wrap" style={{ marginBottom: '16px' }}>
-                                                    <span className="badge" style={{ background: 'rgba(116, 251, 254, 0.1)', color: '#74fbfe', padding: '4px 12px', borderRadius: '20px', fontSize: '12px', fontWeight: 500 }}>{post.category}</span>
+                                                    <span className="badge" style={{ background: 'rgba(116, 251, 254, 0.1)', color: '#00bcd4', padding: '4px 12px', borderRadius: '20px', fontSize: '12px', fontWeight: 500 }}>{post.category}</span>
                                                     <span style={{ fontSize: '13px', color: '#999' }}><i className="fa-regular fa-calendar" style={{ marginRight: '6px' }} />{post.date}</span>
                                                 </div>
                                                 <Link href={`/blog/${post.slug}`} style={{ fontSize: '20px', fontWeight: '700', lineHeight: '1.4', display: 'block', minHeight: '56px' }}>{post.title}</Link>
@@ -47,7 +47,7 @@ export default function Blog() {
                                                 <div className="d-flex align-items-center justify-content-between">
                                                     <div className="d-flex align-items-center gap-2">
                                                         <div style={{ width: '32px', height: '32px', borderRadius: '50%', background: 'rgba(116, 251, 254, 0.15)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                                                            <i className="fa-regular fa-user" style={{ fontSize: '14px', color: '#74fbfe' }} />
+                                                            <i className="fa-regular fa-user" style={{ fontSize: '14px', color: '#00bcd4' }} />
                                                         </div>
                                                         <span style={{ fontSize: '13px', color: '#999' }}>{post.author}</span>
                                                     </div>

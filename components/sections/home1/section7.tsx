@@ -20,69 +20,69 @@ const clientLogos = [
 
 const swiperOptions = {
     modules: [Autoplay],
-    slidesPerView: 3,
-    spaceBetween: 40,
+    slidesPerView: 4,
+    slidesPerGroup: 1,
+    spaceBetween: 30,
     autoplay: {
-        delay: 2000,
+        delay: 4500,
         disableOnInteraction: false,
     },
     loop: true,
     breakpoints: {
         320: {
-            slidesPerView: 1,
+            slidesPerView: 2,
             slidesPerGroup: 1,
             spaceBetween: 20,
         },
         575: {
             slidesPerView: 2,
-            slidesPerGroup: 2,
-            spaceBetween: 30,
+            slidesPerGroup: 1,
+            spaceBetween: 25,
         },
         767: {
-            slidesPerView: 2,
-            slidesPerGroup: 2,
-            spaceBetween: 30,
+            slidesPerView: 3,
+            slidesPerGroup: 1,
+            spaceBetween: 25,
         },
         991: {
-            slidesPerView: 3,
-            slidesPerGroup: 3,
-            spaceBetween: 40,
+            slidesPerView: 4,
+            slidesPerGroup: 1,
+            spaceBetween: 30,
         },
         1199: {
-            slidesPerView: 3,
-            slidesPerGroup: 3,
-            spaceBetween: 40,
+            slidesPerView: 4,
+            slidesPerGroup: 1,
+            spaceBetween: 30,
         },
     }
 }
 
-export default function Section7() {
+export default function Section7({ showHeading = true }: { showHeading?: boolean }) {
     return (
         <>
             <div className="brands1-section-area sp2">
                 <div className="container">
-                    <div className="row">
-                        <div className="col-lg-5 m-auto">
-                            <div className="brand-header heading2 space-margin60 text-center">
-                                <h5 data-aos="fade-left" data-aos-duration={800}>Our Clients</h5>
-                                <div className="space16" />
-                                <h2 className="text-anime-style-3">Trusted by Industry Leaders</h2>
+                    {showHeading && (
+                        <div className="row">
+                            <div className="col-lg-5 m-auto">
+                                <div className="brand-header heading2 space-margin60 text-center">
+                                    <h5 data-aos="fade-left" data-aos-duration={800}>Our Clients</h5>
+                                    <div className="space16" />
+                                    <h2 className="text-anime-style-3">Trusted by Industry Leaders</h2>
+                                </div>
                             </div>
                         </div>
-                    </div>
+                    )}
                     <div className="row">
                         <div className="col-lg-12">
                             <Swiper {...swiperOptions}>
                                 {clientLogos.map((client, index) => (
                                     <SwiperSlide key={index}>
-                                        <div className="brand-box" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', minHeight: '80px' }}>
+                                        <div className="brand-box">
                                             <img
                                                 src={client.image}
                                                 alt={client.name}
                                                 title={client.name}
-                                                style={{ maxHeight: '60px', maxWidth: '100%', objectFit: 'contain', filter: 'grayscale(100%)', opacity: 0.7, transition: 'all 0.3s ease' }}
-                                                onMouseEnter={(e) => { e.currentTarget.style.filter = 'grayscale(0%)'; e.currentTarget.style.opacity = '1' }}
-                                                onMouseLeave={(e) => { e.currentTarget.style.filter = 'grayscale(100%)'; e.currentTarget.style.opacity = '0.7' }}
                                             />
                                         </div>
                                     </SwiperSlide>

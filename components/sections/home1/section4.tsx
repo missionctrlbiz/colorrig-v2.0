@@ -76,7 +76,7 @@ export default function Section4() {
 									<SwiperSlide className="team-widget-boxarea" key={index}>
 										<div className="img1 image-anime">
 											<Link href={`/team/${member.slug}`}>
-												<img src={member.image} alt={member.name} style={{ width: '100%', height: '400px', objectFit: 'cover', borderRadius: '10px' }} />
+												<img src={member.image} alt={member.name} />
 											</Link>
 										</div>
 										<div className="space20" />
@@ -90,10 +90,10 @@ export default function Section4() {
 							</Swiper>
 
 							<div className="owl-nav">
-								<button type="button" role="presentation" className="owl-prev h1p">
+								<button type="button" className="owl-prev h1p" aria-label="Previous team member">
 									<i className="fa-solid fa-angle-left" />
 								</button>
-								<button type="button" role="presentation" className="owl-next h1n">
+								<button type="button" className="owl-next h1n" aria-label="Next team member">
 									<i className="fa-solid fa-angle-right" />
 								</button>
 							</div>

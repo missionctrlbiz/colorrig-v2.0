@@ -67,29 +67,29 @@ export default function Section6() {
                             <Swiper {...swiperOptions} className="owl-carousel">
                                 {galleryItems.map((item, index) => (
                                     <SwiperSlide className="memory-boxarea" key={index}>
-                                        <div className="img1 image-anime">
-                                            <Link href={`/portfolio/${item.slug}`}>
-                                                <img src={item.image} alt={item.title} style={{ width: '100%', height: '350px', objectFit: 'cover' }} />
-                                            </Link>
-                                        </div>
-                                        <div className="content-area">
-                                            <div className="arrow">
-                                                <Link href={`/portfolio/${item.slug}`}><i className="fa-solid fa-arrow-right" /></Link>
+                                        <Link href={`/portfolio/${item.slug}`} className="memory-card-link">
+                                            <div className="img1 image-anime">
+                                                <img src={item.image} alt={item.title} />
                                             </div>
-                                            <div className="space18" />
-                                            <p>{item.category}</p>
-                                            <div className="space12" />
-                                            <Link href={`/portfolio/${item.slug}`}>{item.shortTitle}</Link>
-                                        </div>
+                                            <div className="content-area">
+                                                <div className="arrow">
+                                                    <i className="fa-solid fa-arrow-right" />
+                                                </div>
+                                                <div className="space18" />
+                                                <p>{item.category}</p>
+                                                <div className="space12" />
+                                                <span className="title">{item.shortTitle}</span>
+                                            </div>
+                                        </Link>
                                     </SwiperSlide>
                                 ))}
                             </Swiper>
 
                             <div className="owl-nav">
-                                <button type="button" role="presentation" className="owl-prev h1p">
+                                <button type="button" className="owl-prev h1p" aria-label="Previous gallery item">
                                     <i className="fa-solid fa-angle-left" />
                                 </button>
-                                <button type="button" role="presentation" className="owl-next h1n">
+                                <button type="button" className="owl-next h1n" aria-label="Next gallery item">
                                     <i className="fa-solid fa-angle-right" />
                                 </button>
                             </div>

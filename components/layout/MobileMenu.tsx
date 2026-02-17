@@ -1,13 +1,26 @@
 'use client'
 import { useState } from 'react';
 import Link from 'next/link'
+import { useRouter } from 'next/navigation'
 
 export default function MobileMenu({ isMobileMenu, handleMobileMenu }: any) {
 	const [isAccordion, setIsAccordion] = useState(1)
+	const [searchQuery, setSearchQuery] = useState('')
+	const router = useRouter()
 
 	const handleAccordion = (key: any) => {
 		setIsAccordion(prevState => prevState === key ? null : key)
 	}
+
+	const handleSearchSubmit = (e: React.FormEvent) => {
+		e.preventDefault()
+		if (searchQuery.trim()) {
+			router.push(`/search?q=${encodeURIComponent(searchQuery)}`)
+			setSearchQuery('')
+			handleMobileMenu() // Close mobile menu
+		}
+	}
+
 	return (
 		<>
 			<div className="mobile-header mobile-haeder1 d-block d-lg-none">
@@ -17,7 +30,7 @@ export default function MobileMenu({ isMobileMenu, handleMobileMenu }: any) {
 							<div className="mobile-header-elements">
 								<div className="mobile-logo">
 									<Link href="/">
-										<img src="/images/Colorrig-Dark.png" alt="Colorrig Limited" style={{ maxWidth: '120px' }} />
+										<img src="/images/Colorrig-White.png" alt="Colorrig Limited" style={{ maxWidth: '160px' }} />
 									</Link>
 								</div>
 								<div className="mobile-nav-icon dots-menu" onClick={handleMobileMenu}>
@@ -31,7 +44,7 @@ export default function MobileMenu({ isMobileMenu, handleMobileMenu }: any) {
 			<div className={`mobile-sidebar mobile-sidebar1 ${isMobileMenu ? 'mobile-menu-active' : ''}`}>
 				<div className="logosicon-area">
 					<div className="logos">
-						<img src="/images/Colorrig-Dark.png" alt="Colorrig Limited" style={{ maxWidth: '120px' }} />
+						<img src="/images/Colorrig-Dark.png" alt="Colorrig Limited" style={{ maxWidth: '190px' }} />
 					</div>
 					<div className="menu-close" onClick={handleMobileMenu}>
 						<i className="fa-solid fa-xmark" />
@@ -40,22 +53,25 @@ export default function MobileMenu({ isMobileMenu, handleMobileMenu }: any) {
 				<div className="mobile-nav mobile-nav1">
 					<ul className="mobile-nav-list nav-list1">
 						<li><Link href="/" className="hash-nav" onClick={handleMobileMenu}>Home</Link></li>
-						<li className="has-sub hash-has-sub"><span className={`submenu-button ${isAccordion == 1 ? "submenu-opened" : ""}`} onClick={() => handleAccordion(1)}><em /></span>
+						<li className="has-sub hash-has-sub">
 							<Link href="/about" className="hash-nav" onClick={handleMobileMenu}>About Us</Link>
+							<span className={`submenu-button ${isAccordion == 1 ? "submenu-opened" : ""}`} onClick={() => handleAccordion(1)}><em /></span>
 							<ul className={`sub-menu ${isAccordion == 1 ? "open-sub" : ""}`} style={{ display: `${isAccordion == 1 ? "block" : "none"}` }}>
 								<li><Link href="/team" className="hash-nav" onClick={handleMobileMenu}>Our Team</Link></li>
 								<li><Link href="/portfolio" className="hash-nav" onClick={handleMobileMenu}>Our Portfolio</Link></li>
 							</ul>
 						</li>
-						<li className="has-sub hash-has-sub"><span className={`submenu-button ${isAccordion == 2 ? "submenu-opened" : ""}`} onClick={() => handleAccordion(2)}><em /></span>
+						<li className="has-sub hash-has-sub">
 							<Link href="/solutions" className="hash-nav" onClick={handleMobileMenu}>Solutions</Link>
+							<span className={`submenu-button ${isAccordion == 2 ? "submenu-opened" : ""}`} onClick={() => handleAccordion(2)}><em /></span>
 							<ul className={`sub-menu ${isAccordion == 2 ? "open-sub" : ""}`} style={{ display: `${isAccordion == 2 ? "block" : "none"}` }}>
 								<li><Link href="/solutions" className="hash-nav" onClick={handleMobileMenu}>Live Streaming Solutions</Link></li>
 								<li><Link href="/solutions#liveu" className="hash-nav" onClick={handleMobileMenu}>LiveU Solutions</Link></li>
 							</ul>
 						</li>
-						<li className="has-sub hash-has-sub"><span className={`submenu-button ${isAccordion == 3 ? "submenu-opened" : ""}`} onClick={() => handleAccordion(3)}><em /></span>
+						<li className="has-sub hash-has-sub">
 							<Link href="#" className="hash-nav">Media &amp; Resources</Link>
+							<span className={`submenu-button ${isAccordion == 3 ? "submenu-opened" : ""}`} onClick={() => handleAccordion(3)}><em /></span>
 							<ul className={`sub-menu ${isAccordion == 3 ? "open-sub" : ""}`} style={{ display: `${isAccordion == 3 ? "block" : "none"}` }}>
 								<li><Link href="/faq" className="hash-nav" onClick={handleMobileMenu}>FAQs</Link></li>
 								<li><Link href="/careers" className="hash-nav" onClick={handleMobileMenu}>Careers</Link></li>
@@ -65,6 +81,42 @@ export default function MobileMenu({ isMobileMenu, handleMobileMenu }: any) {
 						</li>
 						<li><Link href="/contact" className="hash-nav" onClick={handleMobileMenu}>Contact Us</Link></li>
 					</ul>
+
+					{/* Mobile Search Bar */}
+					<div style={{ padding: '20px 0', borderTop: '1px solid rgba(0,0,0,0.1)', borderBottom: '1px solid rgba(0,0,0,0.1)', margin: '15px 0' }}>
+						<form onSubmit={handleSearchSubmit} style={{ display: 'flex', gap: '8px' }}>
+							<input
+								type="search"
+								value={searchQuery}
+								onChange={(e) => setSearchQuery(e.target.value)}
+								placeholder="Search Colorrig Limited..."
+								style={{
+									flex: 1,
+									padding: '12px 16px',
+									border: '2px solid #e0e0e0',
+									borderRadius: '8px',
+									fontSize: '14px',
+									outline: 'none'
+								}}
+								onFocus={(e) => e.target.style.borderColor = '#00bcd4'}
+								onBlur={(e) => e.target.style.borderColor = '#e0e0e0'}
+							/>
+							<button
+								type="submit"
+								style={{
+									padding: '12px 20px',
+									background: '#00bcd4',
+									color: 'white',
+									border: 'none',
+									borderRadius: '8px',
+									cursor: 'pointer',
+									fontSize: '16px'
+								}}
+							>
+								<i className="fa-solid fa-magnifying-glass" />
+							</button>
+						</form>
+					</div>
 
 					<div className="allmobilesection">
 						<Link href="/contact" className="vl-btn1">Get a Quote</Link>

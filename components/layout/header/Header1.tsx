@@ -1,6 +1,21 @@
+'use client'
 import Link from 'next/link'
+import { useState } from 'react'
+import { useRouter } from 'next/navigation'
 
 export default function Header1({ scroll, isMobileMenu, handleMobileMenu, isSearch, handleSearch }: any) {
+	const [searchQuery, setSearchQuery] = useState('')
+	const router = useRouter()
+
+	const handleSearchSubmit = (e: React.FormEvent) => {
+		e.preventDefault()
+		if (searchQuery.trim()) {
+			router.push(`/search?q=${encodeURIComponent(searchQuery)}`)
+			setSearchQuery('')
+			handleSearch() // Close search form
+		}
+	}
+
 	return (
 		<>
 			<header>
@@ -38,7 +53,7 @@ export default function Header1({ scroll, isMobileMenu, handleMobileMenu, isSear
 												<ul className="dropdown-padding">
 													<li><Link href="/faq">FAQs</Link></li>
 													<li><Link href="/careers">Careers</Link></li>
-													<li><Link href="/memories">Gallery</Link></li>
+													<li><Link href="/gallery">Gallery</Link></li>
 													<li><Link href="/blog">The Live Link</Link></li>
 												</ul>
 											</li>
@@ -75,8 +90,15 @@ export default function Header1({ scroll, isMobileMenu, handleMobileMenu, isSear
 											<i className="fa-solid fa-xmark" />
 										</div>
 										<div className="header-search-container">
-											<form role="search" className="search-form">
-												<input type="search" className="search-field" placeholder="Search …" name="s" />
+											<form role="search" className="search-form" onSubmit={handleSearchSubmit}>
+												<input
+													type="search"
+													className="search-field"
+													placeholder="Search Colorrig Limited..."
+													name="s"
+													value={searchQuery}
+													onChange={(e) => setSearchQuery(e.target.value)}
+												/>
 												<button type="submit" className="search-submit">
 													<img src="/assets/img/icons/search1.svg" alt="Search" />
 												</button>

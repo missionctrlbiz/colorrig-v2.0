@@ -22,26 +22,29 @@ export default function Section8() {
 					<div className="row">
 						{latestPosts.map((post, index) => (
 							<div className="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-duration={800 + (index * 200)} key={post.id}>
-								<div className="blog1-auhtor-boxarea" style={{ height: '100%', display: 'flex', flexDirection: 'column' }}>
+								<div className="blog4-boxarea">
 									<div className="img1 image-anime">
-										<img src={post.image} alt={post.title} style={{ width: '100%', height: '240px', objectFit: 'cover', borderRadius: '10px 10px 0 0' }} />
+										<Link href={`/blog/${post.slug}`}>
+											<img src={post.image} alt={post.title} />
+										</Link>
 									</div>
-									<div className="content-area" style={{ flex: 1, display: 'flex', flexDirection: 'column', justifyContent: 'space-between', padding: '25px', backgroundColor: 'var(--ztc-bg-bg-2)', borderRadius: '0 0 10px 10px' }}>
-										<div>
-											<ul>
-												<li>
-													<Link href={`/blog/${post.slug}`} style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-														<img src="/assets/img/icons/calender1.svg" alt="" style={{ width: '20px', height: '20px' }} />
-														{post.date}
-													</Link>
-												</li>
-											</ul>
-											<div className="space20" />
-											<Link href={`/blog/${post.slug}`} style={{ fontSize: '20px', fontWeight: 'bold', lineHeight: '1.4' }}>{post.title}</Link>
+									<div className="content-area">
+										<div className="d-flex align-items-center gap-2 flex-wrap blog-meta">
+											<span className="badge blog-badge">{post.category}</span>
+											<span className="blog-date"><i className="fa-regular fa-calendar" />{post.date}</span>
 										</div>
-										<div className="space24" />
-										<div className="btn-area1">
-											<Link href={`/blog/${post.slug}`} className="vl-btn2">Read More <i className="fa-solid fa-arrow-right" style={{ marginLeft: '5px' }} /></Link>
+										<Link href={`/blog/${post.slug}`} className="head">{post.title}</Link>
+										<div className="space12" />
+										<p>{post.excerpt.length > 100 ? post.excerpt.substring(0, 100) + '...' : post.excerpt}</p>
+										<div className="space20" />
+										<div className="d-flex align-items-center justify-content-between">
+											<div className="d-flex align-items-center gap-2">
+												<div className="author-icon">
+													<i className="fa-regular fa-user" />
+												</div>
+												<span className="author-name">{post.author}</span>
+											</div>
+											<Link href={`/blog/${post.slug}`} className="readmore">Read More <i className="fa-solid fa-arrow-right" /></Link>
 										</div>
 									</div>
 								</div>

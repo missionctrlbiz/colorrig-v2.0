@@ -78,7 +78,7 @@ export default async function TeamMemberDetail({ params }: { params: Promise<{ s
                                             </div>
                                             <div style={{ padding: '24px', textAlign: 'center' }}>
                                                 <h3 style={{ color: '#070327', fontSize: '22px', marginBottom: '8px' }}>{member.name}</h3>
-                                                <p style={{ color: '#74fbfe', fontWeight: 600, fontSize: '15px' }}>{member.role}</p>
+                                                <p style={{ color: '#00bcd4', fontWeight: 600, fontSize: '15px' }}>{member.role}</p>
                                             </div>
                                         </div>
 
@@ -90,18 +90,18 @@ export default async function TeamMemberDetail({ params }: { params: Promise<{ s
                                             boxShadow: '0 4px 24px rgba(0,0,0,0.08)',
                                             marginBottom: '24px'
                                         }}>
-                                            <h4 style={{ color: '#070327', fontSize: '18px', marginBottom: '20px', borderBottom: '2px solid #74fbfe', paddingBottom: '12px', display: 'inline-block' }}>Quick Info</h4>
+                                            <h4 style={{ color: '#070327', fontSize: '18px', marginBottom: '20px', borderBottom: '2px solid #00bcd4', paddingBottom: '12px', display: 'inline-block' }}>Quick Info</h4>
                                             <ul style={{ listStyle: 'none', padding: 0, margin: 0 }}>
                                                 <li style={{ display: 'flex', alignItems: 'center', gap: '12px', padding: '10px 0', borderBottom: '1px solid #f0f0f0' }}>
-                                                    <i className="fa-solid fa-briefcase" style={{ color: '#74fbfe', fontSize: '16px', width: '20px' }} />
+                                                    <i className="fa-solid fa-briefcase" style={{ color: '#00bcd4', fontSize: '16px', width: '20px' }} />
                                                     <span style={{ color: '#555', fontSize: '15px' }}>{member.role}</span>
                                                 </li>
                                                 <li style={{ display: 'flex', alignItems: 'center', gap: '12px', padding: '10px 0', borderBottom: '1px solid #f0f0f0' }}>
-                                                    <i className="fa-solid fa-building" style={{ color: '#74fbfe', fontSize: '16px', width: '20px' }} />
+                                                    <i className="fa-solid fa-building" style={{ color: '#00bcd4', fontSize: '16px', width: '20px' }} />
                                                     <span style={{ color: '#555', fontSize: '15px' }}>Colorrig Limited</span>
                                                 </li>
                                                 <li style={{ display: 'flex', alignItems: 'center', gap: '12px', padding: '10px 0' }}>
-                                                    <i className="fa-solid fa-location-dot" style={{ color: '#74fbfe', fontSize: '16px', width: '20px' }} />
+                                                    <i className="fa-solid fa-location-dot" style={{ color: '#00bcd4', fontSize: '16px', width: '20px' }} />
                                                     <span style={{ color: '#555', fontSize: '15px' }}>Lagos, Nigeria</span>
                                                 </li>
                                             </ul>
@@ -119,15 +119,15 @@ export default async function TeamMemberDetail({ params }: { params: Promise<{ s
                                     <div style={{ paddingLeft: '20px' }}>
                                         {/* About Section Header */}
                                         <div style={{ marginBottom: '32px' }}>
-                                            <h5 style={{ color: '#74fbfe', fontSize: '16px', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '1px', marginBottom: '12px' }}>Meet Our Team</h5>
+                                            <h5 style={{ color: '#00bcd4', fontSize: '16px', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '1px', marginBottom: '12px' }}>Meet Our Team</h5>
                                             <h2 style={{ color: '#070327', fontSize: '32px', fontWeight: 700, marginBottom: '8px' }}>About {member.name}</h2>
-                                            <div style={{ width: '60px', height: '3px', background: '#74fbfe', borderRadius: '2px' }} />
+                                            <div style={{ width: '60px', height: '3px', background: '#00bcd4', borderRadius: '2px' }} />
                                         </div>
 
                                         {/* Intro paragraph — highlighted */}
                                         <div style={{
-                                            background: 'linear-gradient(135deg, rgba(116, 251, 254, 0.06), rgba(7, 3, 39, 0.03))',
-                                            borderLeft: '4px solid #74fbfe',
+                                            background: 'linear-gradient(135deg, rgba(0, 188, 212, 0.06), rgba(7, 3, 39, 0.03))',
+                                            borderLeft: '4px solid #00bcd4',
                                             padding: '24px 28px',
                                             borderRadius: '0 12px 12px 0',
                                             marginBottom: '32px'
@@ -153,10 +153,10 @@ export default async function TeamMemberDetail({ params }: { params: Promise<{ s
                                                         padding: '24px',
                                                         boxShadow: '0 2px 16px rgba(0,0,0,0.06)',
                                                         height: '100%',
-                                                        borderTop: '3px solid #74fbfe'
+                                                        borderTop: '3px solid #00bcd4'
                                                     }}>
-                                                        <div style={{ width: '50px', height: '50px', borderRadius: '50%', background: 'rgba(116, 251, 254, 0.1)', display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: '16px' }}>
-                                                            <i className="fa-solid fa-lightbulb" style={{ color: '#74fbfe', fontSize: '22px' }} />
+                                                        <div style={{ width: '50px', height: '50px', borderRadius: '50%', background: 'rgba(0, 188, 212, 0.1)', display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: '16px' }}>
+                                                            <i className="fa-solid fa-lightbulb" style={{ color: '#00bcd4', fontSize: '22px' }} />
                                                         </div>
                                                         <h4 style={{ color: '#070327', fontSize: '17px', fontWeight: 700, marginBottom: '8px' }}>Innovation</h4>
                                                         <p style={{ color: '#666', fontSize: '14px', lineHeight: '1.6' }}>Constantly pushing boundaries with cutting-edge broadcast and media solutions.</p>
@@ -169,10 +169,10 @@ export default async function TeamMemberDetail({ params }: { params: Promise<{ s
                                                         padding: '24px',
                                                         boxShadow: '0 2px 16px rgba(0,0,0,0.06)',
                                                         height: '100%',
-                                                        borderTop: '3px solid #74fbfe'
+                                                        borderTop: '3px solid #00bcd4'
                                                     }}>
-                                                        <div style={{ width: '50px', height: '50px', borderRadius: '50%', background: 'rgba(116, 251, 254, 0.1)', display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: '16px' }}>
-                                                            <i className="fa-solid fa-handshake" style={{ color: '#74fbfe', fontSize: '22px' }} />
+                                                        <div style={{ width: '50px', height: '50px', borderRadius: '50%', background: 'rgba(0, 188, 212, 0.1)', display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: '16px' }}>
+                                                            <i className="fa-solid fa-handshake" style={{ color: '#00bcd4', fontSize: '22px' }} />
                                                         </div>
                                                         <h4 style={{ color: '#070327', fontSize: '17px', fontWeight: 700, marginBottom: '8px' }}>Collaboration</h4>
                                                         <p style={{ color: '#666', fontSize: '14px', lineHeight: '1.6' }}>Thrives in team environments and builds strong client relationships.</p>
@@ -185,10 +185,10 @@ export default async function TeamMemberDetail({ params }: { params: Promise<{ s
                                                         padding: '24px',
                                                         boxShadow: '0 2px 16px rgba(0,0,0,0.06)',
                                                         height: '100%',
-                                                        borderTop: '3px solid #74fbfe'
+                                                        borderTop: '3px solid #00bcd4'
                                                     }}>
-                                                        <div style={{ width: '50px', height: '50px', borderRadius: '50%', background: 'rgba(116, 251, 254, 0.1)', display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: '16px' }}>
-                                                            <i className="fa-solid fa-trophy" style={{ color: '#74fbfe', fontSize: '22px' }} />
+                                                        <div style={{ width: '50px', height: '50px', borderRadius: '50%', background: 'rgba(0, 188, 212, 0.1)', display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: '16px' }}>
+                                                            <i className="fa-solid fa-trophy" style={{ color: '#00bcd4', fontSize: '22px' }} />
                                                         </div>
                                                         <h4 style={{ color: '#070327', fontSize: '17px', fontWeight: 700, marginBottom: '8px' }}>Excellence</h4>
                                                         <p style={{ color: '#666', fontSize: '14px', lineHeight: '1.6' }}>Committed to delivering high-quality results that exceed expectations.</p>
@@ -201,10 +201,10 @@ export default async function TeamMemberDetail({ params }: { params: Promise<{ s
                                                         padding: '24px',
                                                         boxShadow: '0 2px 16px rgba(0,0,0,0.06)',
                                                         height: '100%',
-                                                        borderTop: '3px solid #74fbfe'
+                                                        borderTop: '3px solid #00bcd4'
                                                     }}>
-                                                        <div style={{ width: '50px', height: '50px', borderRadius: '50%', background: 'rgba(116, 251, 254, 0.1)', display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: '16px' }}>
-                                                            <i className="fa-solid fa-chart-line" style={{ color: '#74fbfe', fontSize: '22px' }} />
+                                                        <div style={{ width: '50px', height: '50px', borderRadius: '50%', background: 'rgba(0, 188, 212, 0.1)', display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: '16px' }}>
+                                                            <i className="fa-solid fa-chart-line" style={{ color: '#00bcd4', fontSize: '22px' }} />
                                                         </div>
                                                         <h4 style={{ color: '#070327', fontSize: '17px', fontWeight: 700, marginBottom: '8px' }}>Growth</h4>
                                                         <p style={{ color: '#666', fontSize: '14px', lineHeight: '1.6' }}>Dedicated to continuous learning and staying ahead of industry trends.</p>

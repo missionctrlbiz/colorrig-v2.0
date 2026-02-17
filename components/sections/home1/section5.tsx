@@ -67,7 +67,7 @@ export default function Section5() {
 								{reasons.map((item, index) => (
 									<SwiperSlide className="testimonial-widget-box" key={index}>
 										<div className="icons">
-											<i className={item.icon} style={{ fontSize: '24px', color: '#74fbfe' }} />
+											<i className={item.icon} style={{ fontSize: '24px', color: '#00bcd4' }} />
 										</div>
 										<div className="space22" />
 										<h4>{item.title}</h4>

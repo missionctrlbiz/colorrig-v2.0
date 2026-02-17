@@ -55,9 +55,9 @@ export default function Popup() {
 						<h2 style={{ color: '#ffffff' }}>Ready to Go Live?</h2>
 						<div className="space8" />
 						<ul>
-							<li style={{ color: '#cccccc' }}><i className="fa-solid fa-check" style={{ color: '#74fbfe', marginRight: '8px' }} />High Definition Live Streaming</li>
-							<li style={{ color: '#cccccc' }}><i className="fa-solid fa-check" style={{ color: '#74fbfe', marginRight: '8px' }} />Professional Broadcast Solutions</li>
-							<li style={{ color: '#cccccc' }}><i className="fa-solid fa-check" style={{ color: '#74fbfe', marginRight: '8px' }} />Multi-Platform Event Coverage</li>
+							<li style={{ color: '#cccccc' }}><i className="fa-solid fa-check" style={{ color: '#00bcd4', marginRight: '8px' }} />High Definition Live Streaming</li>
+							<li style={{ color: '#cccccc' }}><i className="fa-solid fa-check" style={{ color: '#00bcd4', marginRight: '8px' }} />Professional Broadcast Solutions</li>
+							<li style={{ color: '#cccccc' }}><i className="fa-solid fa-check" style={{ color: '#00bcd4', marginRight: '8px' }} />Multi-Platform Event Coverage</li>
 						</ul>
 					</div>
 					<div className="space50" />

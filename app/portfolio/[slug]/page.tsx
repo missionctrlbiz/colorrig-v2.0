@@ -39,7 +39,7 @@ export default async function PortfolioDetail({ params }: { params: Promise<{ sl
                                 <div className="col-lg-8">
                                     <div className="blog-deatils-content heading2">
                                         <div className="img1">
-                                            <img src={item.image} alt={item.title} style={{ width: '100%', height: 'auto', borderRadius: '10px' }} />
+                                            <img src={item.image} alt={item.title} className="portfolio-detail-image" />
                                         </div>
                                         <div className="space32" />
                                         <ul>
@@ -50,7 +50,7 @@ export default async function PortfolioDetail({ params }: { params: Promise<{ sl
                                                 <img src="/assets/img/icons/location1.svg" alt="" /> {item.location} <span> | </span>
                                             </li>
                                             <li>
-                                                <span className="badge" style={{ background: 'var(--ztc-bg-bg-3)', color: 'var(--ztc-text-text-2)', padding: '4px 12px', borderRadius: '20px', fontSize: '14px' }}>{item.category}</span>
+                                                <span className="portfolio-badge">{item.category}</span>
                                             </li>
                                         </ul>
                                         <div className="space18" />
@@ -64,7 +64,7 @@ export default async function PortfolioDetail({ params }: { params: Promise<{ sl
                                         ))}
 
                                         {/* Blockquote example if needed, using generic style */}
-                                        <blockquote style={{ borderLeft: '4px solid var(--ztc-bg-bg-3)', paddingLeft: '20px', fontStyle: 'italic', margin: '20px 0', color: 'var(--ztc-text-text-4)' }}>
+                                        <blockquote className="portfolio-blockquote">
                                             "A successful event is not just about execution, but about creating memorable experiences through seamless technology."
                                         </blockquote>
 
@@ -72,11 +72,11 @@ export default async function PortfolioDetail({ params }: { params: Promise<{ sl
                                             <>
                                                 <div className="space24" />
                                                 <div className="video-btn-area">
-                                                    <div className="img1" style={{ position: 'relative' }}>
-                                                        <img src={item.image} alt="Video Thumbnail" style={{ width: '100%', borderRadius: '10px', filter: 'brightness(0.7)' }} />
-                                                        <div className="play" style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)' }}>
-                                                            <a href={item.videoUrl} target="_blank" rel="noopener noreferrer" className="popup-youtube" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', width: '80px', height: '80px', background: 'var(--ztc-bg-bg-3)', borderRadius: '50%', color: 'var(--ztc-text-text-2)' }}>
-                                                                <i className="fa-solid fa-play" style={{ fontSize: '24px' }} />
+                                                    <div className="img1 portfolio-video-wrapper">
+                                                        <img src={item.image} alt="Video Thumbnail" className="portfolio-video-thumbnail" />
+                                                        <div className="play portfolio-video-play">
+                                                            <a href={item.videoUrl} target="_blank" rel="noopener noreferrer" className="popup-youtube" title="Watch Video">
+                                                                <i className="fa-solid fa-play" />
                                                             </a>
                                                         </div>
                                                     </div>
@@ -160,7 +160,7 @@ export default async function PortfolioDetail({ params }: { params: Promise<{ sl
                                     <div key={project.id} className="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-duration={800}>
                                         <div className="blog4-boxarea">
                                             <div className="img1">
-                                                <img src={project.image} alt={project.shortTitle} style={{ width: '100%', height: '250px', objectFit: 'cover', borderRadius: '10px' }} />
+                                                <img src={project.image} alt={project.shortTitle} className="portfolio-recent-image" />
                                             </div>
                                             <div className="content-area">
                                                 <ul>

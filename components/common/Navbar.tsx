@@ -4,6 +4,7 @@ import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import Image from "next/image";
+import SearchBar from "@/components/elements/SearchBar";
 
 export default function Navbar() {
     const [isOpen, setIsOpen] = useState(false);
@@ -55,7 +56,7 @@ export default function Navbar() {
                 </Link>
 
                 {/* Desktop Menu */}
-                <div className="hidden md:flex space-x-8 items-center">
+                <div className="hidden md:flex space-x-6 items-center">
                     {navLinks.map((link) => (
                         <div key={link.name} className="relative group">
                             <Link
@@ -83,6 +84,9 @@ export default function Navbar() {
                             )}
                         </div>
                     ))}
+
+                    {/* Search Bar */}
+                    <SearchBar />
                 </div>
 
                 {/* Mobile Menu Button */}

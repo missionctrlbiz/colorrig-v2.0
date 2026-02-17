@@ -57,7 +57,7 @@ export default function Section1() {
 						<div className="row align-items-center w-100">
 							<div className="col-lg-8">
 								<div className="hero1-header heading1">
-									<h5 data-aos="fade-left" data-aos-duration={800} style={{ color: '#74fbfe' }}>
+									<h5 data-aos="fade-left" data-aos-duration={800} style={{ color: '#00bcd4' }}>
 										Excellence Meets Live Transmission
 									</h5>
 									<div className="space16" />
@@ -103,7 +103,7 @@ export default function Section1() {
 						<div className="row align-items-center w-100">
 							<div className="col-lg-8">
 								<div className="hero1-header heading1">
-									<h5 data-aos="fade-left" data-aos-duration={800} style={{ color: '#74fbfe' }}>
+									<h5 data-aos="fade-left" data-aos-duration={800} style={{ color: '#00bcd4' }}>
 										Professional Media Production
 									</h5>
 									<div className="space16" />
@@ -149,7 +149,7 @@ export default function Section1() {
 						<div className="row align-items-center w-100">
 							<div className="col-lg-8">
 								<div className="hero1-header heading1">
-									<h5 data-aos="fade-left" data-aos-duration={800} style={{ color: '#74fbfe' }}>
+									<h5 data-aos="fade-left" data-aos-duration={800} style={{ color: '#00bcd4' }}>
 										Hybrid Event Expertise
 									</h5>
 									<div className="space16" />

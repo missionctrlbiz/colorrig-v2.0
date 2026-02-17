@@ -12,7 +12,7 @@ const config: Config = {
                 sans: ['var(--font-mtn-brighter-sans)'],
             },
             colors: {
-                primary: "#74fbfe", // Colorrig Aqua
+                primary: "#00bcd4", // Colorrig Aqua
                 secondary: "#070327", // Colorrig Blue
             },
         },
