@@ -22,8 +22,8 @@ export default function SearchBar() {
             className="relative hidden lg:flex items-center"
         >
             <div className={`flex items-center gap-2 px-4 py-2 rounded-lg transition-all ${isFocused
-                    ? 'bg-white border-2 border-primary'
-                    : 'bg-white/20 border-2 border-white/30 hover:bg-white/30'
+                ? 'bg-white border-2 border-primary'
+                : 'bg-white/20 border-2 border-white/30 hover:bg-white/30'
                 }`}>
                 <input
                     type="text"
