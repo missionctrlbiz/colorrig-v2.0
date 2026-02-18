@@ -36,6 +36,7 @@ export default function SearchBar() {
                 />
                 <button
                     type="submit"
+                    aria-label="Search"
                     className="text-primary hover:text-primary/80 transition-colors"
                 >
                     <i className="fa-solid fa-magnifying-glass" />

@@ -754,6 +754,7 @@ button,
 .tabs-widget-boxarea .content-area p {
   display: -webkit-box;
   -webkit-line-clamp: 3;
+  line-clamp: 3;
   -webkit-box-orient: vertical;
   overflow: hidden;
   color: #666;
@@ -916,8 +917,8 @@ button,
   color: #00bcd4;
   padding: 4px 12px;
   border-radius: 20px;
-  fontSize: 12px;
-  fontWeight: 500;
+  font-size: 12px;
+  font-weight: 500;
 }
 
 .blog1-section-area .blog-date {
@@ -1003,7 +1004,7 @@ button,
 }
 
 .mobile-nav .submenu-button {
-  display: inline-block;
+  display: block;
   width: 24px;
   height: 24px;
   line-height: 24px;
@@ -1012,6 +1013,7 @@ button,
   float: right;
   color: #00bcd4;
   font-weight: bold;
+  -webkit-user-select: none;
   user-select: none;
 }
 

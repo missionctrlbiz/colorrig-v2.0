@@ -93,6 +93,7 @@ export default function Navbar() {
                 <button
                     className="md:hidden focus:outline-none"
                     onClick={() => setIsOpen(!isOpen)}
+                    aria-label="Toggle mobile menu"
                 >
                     <div className={`w-6 h-0.5 mb-1.5 transition-all ${scrolled ? 'bg-black' : 'bg-white'} ${isOpen ? 'rotate-45 translate-y-2' : ''}`}></div>
                     <div className={`w-6 h-0.5 mb-1.5 transition-all ${scrolled ? 'bg-black' : 'bg-white'} ${isOpen ? 'opacity-0' : ''}`}></div>
@@ -108,6 +109,7 @@ export default function Navbar() {
                 <button
                     className="absolute top-6 right-6 text-white focus:outline-none"
                     onClick={() => setIsOpen(false)}
+                    aria-label="Close mobile menu"
                 >
                     <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />

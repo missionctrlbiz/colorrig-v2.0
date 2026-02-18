@@ -103,6 +103,7 @@ export default function MobileMenu({ isMobileMenu, handleMobileMenu }: any) {
 							/>
 							<button
 								type="submit"
+								aria-label="Search"
 								style={{
 									padding: '12px 20px',
 									background: '#00bcd4',
